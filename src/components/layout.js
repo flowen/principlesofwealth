@@ -79,7 +79,7 @@ const Layout = ({ children }) => {
         ]}
       ></Helmet>
 
-      <main>{children}</main>
+      <main class="layout">{children}</main>
     </>
   )
 }

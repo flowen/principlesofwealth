@@ -36,22 +36,35 @@ html {
   -ms-user-select: none;
   user-select: none;
   cursor: default;
-  background-color: $color-dark; // for some strange reason I have to add it to html + body, due to some weird overlapping / transparent / opacity effect????
+}
+
+:root {
+  --columns: 5;
+  --gutter: 10px;
+  --col: calc((100vw - (var(--gutter) * (var(--columns) - 1))) / var(--columns));
+
+  @include mobile-only {
+    --col: 20px;
+  }
+
+  @include tablet-portrait-up {
+    --gutter: 20px;
+    --columns: 9;
+  }
+
+  @include tablet-landscape-up {
+    --columns: 12;
+  }
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
-  padding: 0 20px;
-  background-color: $color-dark;
-  color: $color-off-white;
+  padding: var(--col);
+  background-color: $color-blue;
+  color: $color-primary;
   font-family: $primary-font;
-
-  @include tablet-portrait-up {
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
 
 /**
@@ -66,7 +79,7 @@ img {
 
 a {
   display: inline-block;
-  color: $color-off-white;
+  color: $color-primary;
   text-decoration: none;
 
   &:hover {
@@ -104,18 +117,8 @@ figcaption {
   font-style: italic;
 }
 
-section {
-  position: relative;
-  padding: 25vmin 0;
-  max-width: 1440px;
-
-  @include tablet-portrait-up {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  @include tablet-landscape-up {
-    padding-left: 90px;
-    padding-right: 90px;
-  }
-}
+// section {
+//   position: relative;
+//   padding: 25vmin 0;
+//   max-width: 1440px;
+// }

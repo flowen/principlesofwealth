@@ -1,12 +1,10 @@
 $primary-font: 'Abhaya Libre', serif;
 $heading-font: $primary-font;
 
-$fs-xs: 1.2vmax;
-$fs-sm: 1.8vmax;
-$fs-base: 2.4vmax;
-$fs-md: 3.2vmax;
-$fs-lg: 5.4vmax;
-$fs-xl: 7.2vmax;
+$fs-base: 1.8rem;
+$fs-md: 2.4rem;
+$fs-lg: 3.2rem;
+$fs-xl: 4.8rem;
 
 @mixin font-base {
   font-family: $primary-font;
@@ -18,12 +16,30 @@ $fs-xl: 7.2vmax;
 @mixin font-body {
   @include font-base;
   font-size: $fs-base;
-  line-height: 1/16 * 25;
+  line-height: 1.2;
+}
 
-  @include mobile-only {
-    font-size: $fs-sm;
-    line-height: 1/20 * 30;
-  }
+@mixin font-title {
+  font-family: 'made_canvasblack', 'Abhaya Libre', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  color: $color-primary;
+
+  $min_width: 320px;
+  $max_width: 1440px;
+  $min_font: 50px;
+  $max_font: 220px;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+@mixin font-subtitle {
+  font-family: 'made_canvasregular', 'Abhaya Libre', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  color: $color-primary;
+  font-size: $fs-base;
 }
 
 @mixin font-heading {
@@ -32,106 +48,41 @@ $fs-xl: 7.2vmax;
   font-weight: 400;
   font-display: swap;
   color: $color-primary;
-
-  @include tablet-portrait-up {
-    white-space: nowrap;
-  }
 }
 
 @mixin font-h1 {
   margin: 0 0 $sp-sm;
   font-size: $fs-lg;
   line-height: 0.9;
-
-  @include tablet-portrait-up {
-    font-size: $fs-lg;
-    line-height: 1/50 * 70;
-  }
-
-  @include tablet-landscape-up {
-    line-height: 1/80 * 105;
-  }
 }
 
 @mixin font-h2 {
   margin: 0 0 $sp-sm;
   font-size: $fs-md;
-  line-height: 1/21 * 35;
-
-  @include tablet-portrait-up {
-    font-size: $fs-lg;
-    line-height: 1/31 * 45;
-  }
+  line-height: 1.667;
 }
 
 @mixin font-h3 {
   margin: 0 0 $sp-sm;
   font-size: $fs-md;
-  line-height: 1/18 * 30;
-
-  @include tablet-portrait-up {
-    font-size: $fs-lg;
-    line-height: 1/22 * 35;
-  }
-
-  @include tablet-landscape-up {
-    line-height: 1/32 * 40;
-  }
+  line-height: 1.667;
 }
 
 @mixin font-h4 {
   margin: 0 0 $sp-sm;
   font-size: $fs-md;
-  line-height: 1/18 * 30;
-
-  @include tablet-portrait-up {
-    font-size: $fs-lg;
-    line-height: 1/24 * 35;
-  }
-
-  @include tablet-landscape-up {
-    line-height: 1/24 * 40;
-  }
+  line-height: 1.667;
 }
 
 @mixin font-lead {
+  font-family: 'made_canvasregular', 'Abhaya Libre', sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: $fs-base;
-  line-height: 1/16 * 25;
-
-  @include mobile-only {
-    font-size: $fs-sm;
-    line-height: 1/20 * 30;
-  }
-
-  @include tablet-portrait-up {
-    font-size: $fs-sm;
-    line-height: 1/24 * 35;
-  }
+  line-height: 1.2;
 }
 
 @mixin font-strong {
   font-weight: 400;
   font-style: normal;
-}
-
-@mixin font-small {
-  font-size: $fs-base;
-  line-height: 1/16 * 20;
-}
-
-@mixin underline($color-border: $color-primary) {
-  display: block;
-  position: relative;
-  padding-bottom: $sp-sm;
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100vw * (1/32);
-    border-bottom: 3px solid $color-border;
-  }
 }

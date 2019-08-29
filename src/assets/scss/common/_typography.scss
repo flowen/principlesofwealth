@@ -19,11 +19,7 @@ html {
 }
 
 body {
-  $min_width: 320px;
-  $max_width: 1000px;
-  $min_font: 16px;
-  $max_font: 24px;
-  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  @include font-body;
 }
 
 p {
@@ -67,14 +63,15 @@ h3,
 h4,
 .h4 {
   @include font-heading;
-  margin: 0 0 $sp-md;
+  margin: 0 0 $sp-base;
   color: $color-heading;
 
   @include tablet-landscape-up {
-    margin-bottom: $sp-lg;
+    margin-bottom: $sp-md;
   }
+
   @include desktop-up {
-    margin-bottom: $sp-xl;
+    margin-bottom: $sp-lg;
   }
 }
 
@@ -82,15 +79,26 @@ h1,
 .h1 {
   @include font-h1;
 }
+
 h2,
 .h2 {
   @include font-h2;
 }
+
 h3,
 .h3 {
   @include font-h3;
 }
+
 h4,
 .h4 {
   @include font-h4;
+}
+
+.title {
+  @include font-title;
+}
+
+.subtitle {
+  @include font-subtitle;
 }
