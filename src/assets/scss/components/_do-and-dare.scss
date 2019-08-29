@@ -1,0 +1,81 @@
+.do-and-dare {
+  position: relative;
+  right: 1em;
+  width: 100%;
+
+  &.splitting {
+    .word {
+      transition: transform $d-slow $ease-out;
+      transition-delay: calc(0.075s * (0.5 * var(--word-index) + var(--word-index)));
+      transform: translateY(105%);
+    }
+
+    &[data-view='true'] .word {
+      transform: translateY(0);
+    }
+  }
+
+  &__paragraph {
+    z-index: 100;
+    position: relative;
+    margin: 0 0 $sp-lg;
+    font-weight: 600;
+    line-height: 0.9;
+    text-align: right;
+    letter-spacing: -0.08em;
+
+    $min_width: 320px;
+    $max_width: 1200px;
+    $min_font: 26px;
+    $max_font: 70px;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  }
+
+  &__line {
+    $offset: 4px;
+    line-height: 1;
+    overflow: hidden;
+    margin: #{-$offset * 2} 0 0 #{-$offset};
+    padding: 0 $offset $offset 0;
+  }
+
+  &--indent-dot,
+  &--indent-ampersand,
+  &--indent-ndash {
+    position: relative;
+  }
+
+  &--indent-dot {
+    left: 0.2em;
+  }
+
+  &--indent-ampersand {
+    left: 0.8em;
+  }
+
+  &--indent-ndash {
+    left: 0.9em;
+  }
+
+  &__photo {
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: 75vw;
+    transform: translateY(-65%);
+
+    @include tablet-portrait-up {
+      left: auto;
+      right: 30vw;
+    }
+
+    @include tablet-landscape-up {
+      right: 50vw;
+    }
+
+    @include desktop-up {
+      right: 45vw;
+    }
+  }
+}

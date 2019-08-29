@@ -1,0 +1,116 @@
+.intro {
+  position: relative;
+  width: 100%;
+  transition: transform 1.7s $ease-in-out 1.4s;
+
+  &__inner {
+    position: relative;
+
+    @include tablet-portrait-up {
+      margin-left: -50px;
+      margin-right: -50px;
+    }
+
+    @include tablet-landscape-up {
+      margin-left: -90px;
+      margin-right: -90px;
+    }
+  }
+
+  &__tip {
+    display: none;
+    margin: 0 0 $sp-xs;
+
+    @include mobile-only {
+      display: block;
+    }
+  }
+
+  &__tip,
+  &__button {
+    text-decoration: underline;
+    color: $color-white;
+    font-size: 14px;
+  }
+
+  &__header {
+    z-index: 50;
+    position: relative;
+    width: 100%;
+    margin: 0 0 $sp-lg;
+    pointer-events: none;
+    color: $color-green;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px $color-green;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 0.9;
+
+    $min_width: 320px;
+    $max_width: 1440px;
+    $min_font: 32px;
+    $max_font: 120px;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+
+    @include tablet-portrait-up {
+      padding-left: 50px;
+      padding-right: 50px;
+      -webkit-text-stroke-width: 4px;
+    }
+
+    @include tablet-landscape-up {
+      padding-left: 90px;
+      padding-right: 90px;
+      -webkit-text-stroke-width: 5px;
+    }
+
+    .word {
+      @for $i from 1 to 19 {
+        .char:nth-child(#{$i})::before {
+          transition-delay: $i * 0.1s;
+          will-change: transform;
+        }
+      }
+      .char::before {
+        opacity: 0;
+        visibility: visible;
+        color: $color-green;
+        -webkit-text-fill-color: $color-green;
+        transition: opacity $d-fast $ease-in;
+      }
+      &.said {
+        .char::before {
+          opacity: 1;
+        }
+
+        @for $i from 1 to 19 {
+          .char:nth-child(#{$i})::before {
+            transition-delay: $i * 0.05s;
+          }
+        }
+      }
+    }
+  }
+
+  &__canvas {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__photo {
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    bottom: -20vh;
+    max-width: 60vw;
+    will-change: transform;
+    transition: transform $d-fast $ease-out;
+
+    @include mobile-only {
+      max-width: 40vw;
+      transform: translateY(-80%);
+    }
+  }
+}

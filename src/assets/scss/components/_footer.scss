@@ -1,0 +1,26 @@
+.footer {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto $sp-xl;
+  text-align: center;
+
+  &__made-by {
+    padding: $sp-lg 0 0;
+    border-top: 1px solid rgba($color-off-white, 0.4);
+    font-size: 16px;
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include tablet-portrait-up {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @include tablet-landscape-up {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}

@@ -1,0 +1,62 @@
+.outro {
+  position: relative;
+
+  &__heading {
+    z-index: 50;
+    position: relative;
+    margin: 0 0 $sp-lg 45vw;
+    pointer-events: none;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 900;
+    line-height: 0.9;
+    color: $color-white;
+
+    $min_width: 320px;
+    $max_width: 1200px;
+    $min_font: 16px;
+    $max_font: 50px;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  }
+
+  &__photo {
+    z-index: 10;
+    position: absolute;
+    right: 55vw;
+    bottom: 0;
+    max-width: 40vw;
+    transition: transform $d-fast $ease-out;
+    transform: translateY(-25%);
+  }
+
+  &__anchor {
+    z-index: 50;
+    position: relative;
+    font-weight: 900;
+    color: $color-off-white;
+
+    $min_width: 320px;
+    $max_width: 1200px;
+    $min_font: 22px;
+    $max_font: 85px;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+
+    .char {
+      transition: transform $d-slow $d-slow $ease-out;
+    }
+
+    &[data-inview='true'] .char {
+      transform: translateY(-0.2em);
+
+      &:nth-child(odd) {
+        transform: translateY(0.2em);
+      }
+    }
+
+    &:hover .char,
+    &:hover .char:nth-child(odd) {
+      transition-delay: 0s;
+      transform: translateY(0);
+    }
+  }
+}

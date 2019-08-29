@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'made_canvasblack';
+  src: url('../fonts/made_canvas_black_personal_use-webfont.woff2') format('woff2'),
+    url('../fonts/made_canvas_black_personal_use-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'made_canvasregular';
+  src: url('../fonts/made_canvas_regular_personal_use-webfont.woff2') format('woff2'),
+    url('../fonts/made_canvas_regular_personal_use-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  $min_width: 320px;
+  $max_width: 1000px;
+  $min_font: 16px;
+  $max_font: 24px;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+p {
+  margin: 0 0 $sp-md;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include tablet-landscape-up {
+    margin-bottom: $sp-lg;
+  }
+}
+
+strong {
+  @include font-strong;
+}
+
+sub,
+sup {
+  font-size: 50%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -1em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  @include font-heading;
+  margin: 0 0 $sp-md;
+  color: $color-heading;
+
+  @include tablet-landscape-up {
+    margin-bottom: $sp-lg;
+  }
+  @include desktop-up {
+    margin-bottom: $sp-xl;
+  }
+}
+
+h1,
+.h1 {
+  @include font-h1;
+}
+h2,
+.h2 {
+  @include font-h2;
+}
+h3,
+.h3 {
+  @include font-h3;
+}
+h4,
+.h4 {
+  @include font-h4;
+}

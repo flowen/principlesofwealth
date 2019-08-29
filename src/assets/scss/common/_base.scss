@@ -1,0 +1,121 @@
+/**
+ * Hide content
+ * {@link https://developer.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/}
+ */
+*[hidden] {
+  display: none !important;
+}
+
+/**
+ * Inheriting box sizing
+ * {@link https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/}
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-feature-settings: 'kern' off;
+  font-feature-settings: 'kern' off;
+  -webkit-font-kerning: none;
+  font-kerning: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  background-color: $color-dark; // for some strange reason I have to add it to html + body, due to some weird overlapping / transparent / opacity effect????
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0 20px;
+  background-color: $color-dark;
+  color: $color-off-white;
+  font-family: $primary-font;
+
+  @include tablet-portrait-up {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/**
+ * Make the image auto resize to the max width of the boundary
+ */
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: inline-block;
+  color: $color-off-white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &[aria-current='page'],
+  &[aria-current='page']:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  @include button-reset;
+  color: $color-off-white;
+}
+
+nav {
+  ul,
+  ol {
+    @extend %list-reset;
+  }
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+figcaption {
+  font-style: italic;
+}
+
+section {
+  position: relative;
+  padding: 25vmin 0;
+  max-width: 1440px;
+
+  @include tablet-portrait-up {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @include tablet-landscape-up {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}

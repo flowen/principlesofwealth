@@ -1,0 +1,23 @@
+// list of z-indexes
+$z-layers: (
+  'object': 200,
+);
+
+// Spacing
+$sp-xs: 0.8rem;
+$sp-sm: 1.3rem;
+$sp-base: 1.8rem;
+$sp-md: 2.8rem;
+$sp-lg: 3.5rem;
+$sp-xl: 6.4rem;
+
+// Easings
+$ease-in: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$ease-out: cubic-bezier(0.165, 0.84, 0.44, 1);
+$ease-in-out: cubic-bezier(0.64, 0.04, 0.35, 1);
+
+// Durations
+$d-fast: 0.125s;
+$d-normal: 0.25s;
+$d-slow: 0.5s;
+$d-slower: 1s;

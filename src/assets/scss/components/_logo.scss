@@ -1,0 +1,33 @@
+.logo {
+  $duration: 1.4s;
+  z-index: 500;
+  position: fixed;
+  left: 50%;
+  width: 45px;
+  transform: translate(-50%, 2vh) scale(0.7);
+  transition-duration: $duration;
+  transition-delay: $duration + 0.5;
+  transition-timing-function: $ease-in-out;
+  transition-property: transform;
+  cursor: pointer;
+
+  .character {
+    position: absolute;
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: $duration;
+    transition-timing-function: $ease-in-out;
+    transition-property: transform opacity;
+
+    &__m {
+      top: 0;
+      left: 0;
+    }
+
+    &__a {
+      top: 38px;
+      left: 9px;
+      transition-delay: 0.5s;
+    }
+  }
+}

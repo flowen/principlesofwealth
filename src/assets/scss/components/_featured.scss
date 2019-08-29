@@ -1,0 +1,80 @@
+.featured {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  align-items: flex-end;
+  overflow: hidden;
+
+  @include tablet-portrait-up {
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+
+  @include tablet-landscape-up {
+    margin-left: -90px;
+    margin-right: -90px;
+  }
+
+  &__inner {
+    @include tablet-portrait-up {
+      box-sizing: content-box;
+      padding: 10vmin 0;
+    }
+  }
+
+  &__title {
+    color: $color-white;
+    letter-spacing: -0.04em;
+
+    $min_width: 320px;
+    $max_width: 1000px;
+    $min_font: 40px;
+    $max_font: 60px;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  }
+
+  &__list {
+    @extend %list-reset;
+
+    @include tablet-portrait-up {
+      position: absolute;
+      left: 0;
+      white-space: nowrap;
+
+      &:nth-child(2) {
+        right: 0;
+        left: auto;
+      }
+      &:nth-child(3) {
+        left: 200px;
+      }
+    }
+  }
+
+  &__item {
+    margin: 0 0.5em 0 0;
+    font-weight: 900;
+    line-height: 0.9;
+    text-transform: uppercase;
+    color: $color-yellow;
+    white-space: nowrap;
+    transition: transform $d-normal $ease-out;
+
+    $min_width: 320px;
+    $max_width: 599px;
+    $min_font: 32px;
+    $max_font: 70px;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+
+    @include tablet-portrait-up {
+      display: inline-block;
+      letter-spacing: -0.04em;
+      font-size: 160px;
+    }
+
+    @include desktop-up {
+      letter-spacing: -0.08em;
+      font-size: 220px;
+    }
+  }
+}
