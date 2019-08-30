@@ -4,92 +4,92 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 const IndexPage = () => (
-  <Layout class="chapters">
+  <Layout className="chapters">
     <SEO title="Principles of Wealth .net" description="Chapters" />
 
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <Link to="/" class="nav__anchor">
+    <nav className="nav">
+      <ul className="nav__list">
+        <li className="nav__item">
+          <Link to="/" className="nav__anchor">
             About
           </Link>
         </li>
-        <li class="nav__item">
-          <Link to="/chapters" class="nav__anchor">
+        <li className="nav__item">
+          <Link to="/chapters" className="nav__anchor">
             Chapters
           </Link>
         </li>
       </ul>
     </nav>
 
-    <h1 class="title">
+    <h1 className="title">
       Principles
       <br /> of Wealth
       <br /> .net
     </h1>
 
-    <h2 class="subtitle">A summary of Naval Ravikant’s tweetstorms and podcast</h2>
+    <h2 className="subtitle">A summary of Naval Ravikant’s tweetstorms and podcast</h2>
 
-    <nav class="chapters">
-      <ol class="chapters__list">
-        <li class="chapters__item">
-          <Link to="" class="chapters__anchor">
+    <nav className="chapters">
+      <ol className="chapters__list">
+        <li className="chapters__item">
+          <Link to="" className="chapters__anchor">
             Chapter asdf ahsdlfk jhasdf
           </Link>
         </li>
 
-        <li class="chapters__item">
-          <Link to="" class="chapters__anchor">
+        <li className="chapters__item">
+          <Link to="" className="chapters__anchor">
             Chapter
           </Link>
         </li>
-        <li class="chapters__item">
-          <Link to="" class="chapters__anchor">
+        <li className="chapters__item">
+          <Link to="" className="chapters__anchor">
             Chapter asdf asf klasdjf lajfkjfakjsdf aljkfh
           </Link>
         </li>
-        <li class="chapters__item">
-          <Link to="" class="chapters__anchor">
+        <li className="chapters__item">
+          <Link to="" className="chapters__anchor">
             Chapter
           </Link>
         </li>
-        <li class="chapters__item">
-          <Link to="" class="chapters__anchor">
+        <li className="chapters__item">
+          <Link to="" className="chapters__anchor">
             Chapter
           </Link>
         </li>
-        <li class="chapters__item">
-          <Link to="" class="chapters__anchor">
+        <li className="chapters__item">
+          <Link to="" className="chapters__anchor">
             Chapter
           </Link>
         </li>
-        <li class="chapters__item">
-          <Link to="" class="chapters__anchor">
+        <li className="chapters__item">
+          <Link to="" className="chapters__anchor">
             Chapter
           </Link>
         </li>
-        <li class="chapters__item">
-          <Link to="" class="chapters__anchor">
+        <li className="chapters__item">
+          <Link to="" className="chapters__anchor">
             Chapter
           </Link>
         </li>
-        <li class="chapters__item">
-          <Link to="" class="chapters__anchor">
+        <li className="chapters__item">
+          <Link to="" className="chapters__anchor">
             Chapter
           </Link>
         </li>
-        <li class="chapters__item">
-          <Link to="" class="chapters__anchor">
+        <li className="chapters__item">
+          <Link to="" className="chapters__anchor">
             Chapter
           </Link>
         </li>
-        <li class="chapters__item">
-          <Link to="" class="chapters__anchor">
+        <li className="chapters__item">
+          <Link to="" className="chapters__anchor">
             Chapter
           </Link>
         </li>
-        <li class="chapters__item">
-          <Link to="" class="chapters__anchor">
+        <li className="chapters__item">
+          <Link to="" className="chapters__anchor">
             Chapter
           </Link>
         </li>

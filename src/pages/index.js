@@ -4,36 +4,36 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 const IndexPage = () => (
-  <Layout class="index-page">
+  <Layout className="index-page">
     <SEO
       title="Principles of Wealth .net"
       description="A summary of Naval Ravikant’s tweetstorms and podcast"
     />
 
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <Link to="/" class="nav__anchor">
+    <nav className="nav">
+      <ul className="nav__list">
+        <li className="nav__item">
+          <Link to="/" className="nav__anchor">
             About
           </Link>
         </li>
-        <li class="nav__item">
-          <Link to="/chapters" class="nav__anchor">
+        <li className="nav__item">
+          <Link to="/chapters" className="nav__anchor">
             Chapters
           </Link>
         </li>
       </ul>
     </nav>
 
-    <h1 class="title">
+    <h1 className="title">
       Principles
       <br /> of Wealth
       <br /> .net
     </h1>
 
-    <h2 class="subtitle">A summary of Naval Ravikant’s tweetstorms and podcast</h2>
+    <h2 className="subtitle">A summary of Naval Ravikant’s tweetstorms and podcast</h2>
 
-    <div class="intro">
+    <div className="intro">
       <p>
         This site is a summary of Naval's famous podcast 'how to get rich'. Which started out as
         several tweetstorms, the podcast dove deep into each tweet.{' '}

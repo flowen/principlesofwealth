@@ -125,9 +125,7 @@ a {
     outline: 0;
   }
 
-  &:hover,
-  &[aria-current='page'],
-  &[aria-current='page']:hover {
+  &:hover {
     text-decoration: underline;
   }
 }
