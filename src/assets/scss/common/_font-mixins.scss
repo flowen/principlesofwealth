@@ -1,7 +1,7 @@
 $primary-font: 'Abhaya Libre', serif;
 $heading-font: $primary-font;
 
-$fs-base: 1.8rem;
+$fs-base: 1.7rem;
 $fs-md: 2.4rem;
 $fs-lg: 3.2rem;
 $fs-xl: 4.8rem;
@@ -11,10 +11,6 @@ $fs-xl: 4.8rem;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-}
-
-@mixin font-body {
-  @include font-base;
   font-size: $fs-base;
   line-height: 1.2;
 }
@@ -29,7 +25,7 @@ $fs-xl: 4.8rem;
   $min_width: 320px;
   $max_width: 1440px;
   $min_font: 50px;
-  $max_font: 220px;
+  $max_font: 210px;
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
 }
 
@@ -40,6 +36,10 @@ $fs-xl: 4.8rem;
   font-display: swap;
   color: $color-primary;
   font-size: $fs-base;
+
+  @include tablet-portrait-up {
+    font-size: $fs-md;
+  }
 }
 
 @mixin font-heading {
@@ -53,7 +53,7 @@ $fs-xl: 4.8rem;
 @mixin font-h1 {
   margin: 0 0 $sp-sm;
   font-size: $fs-lg;
-  line-height: 0.9;
+  line-height: 1.2;
 }
 
 @mixin font-h2 {
@@ -72,14 +72,6 @@ $fs-xl: 4.8rem;
   margin: 0 0 $sp-sm;
   font-size: $fs-md;
   line-height: 1.667;
-}
-
-@mixin font-lead {
-  font-family: 'made_canvasregular', 'Abhaya Libre', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: $fs-base;
-  line-height: 1.2;
 }
 
 @mixin font-strong {
