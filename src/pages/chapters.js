@@ -3,9 +3,9 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-const IndexPage = () => (
+const ChaptersPage = () => (
   <Layout className="chapters">
-    <SEO title="Principles of Wealth .net" description="Chapters" />
+    <SEO description="Chapters" />
 
     <nav className="nav">
       <ul className="nav__list">
@@ -98,4 +98,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default ChaptersPage
