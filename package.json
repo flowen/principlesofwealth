@@ -5,6 +5,7 @@
   "author": "Rou Hun Fan <lowen.f@gmail.com>",
   "dependencies": {
     "gatsby": "^2.13.73",
+    "gatsby-plugin-catch-links": "^2.1.6",
     "gatsby-plugin-google-analytics": "^2.1.12",
     "gatsby-plugin-manifest": "^2.2.6",
     "gatsby-plugin-offline": "^2.2.7",
@@ -12,6 +13,7 @@
     "gatsby-plugin-react-helmet": "^3.1.4",
     "gatsby-plugin-sass": "^2.1.12",
     "gatsby-source-filesystem": "^2.1.11",
+    "gatsby-transformer-remark": "^2.6.19",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
