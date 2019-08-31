@@ -1,0 +1,39 @@
+.chapters {
+  &__list {
+    @extend %list-reset;
+    counter-reset: chapter-counter;
+  }
+
+  &__item {
+    counter-increment: chapter-counter;
+    border-bottom: 1px solid $color-primary;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    & .chapters__anchor:after {
+      content: '\00a7''0' counter(chapter-counter) '.';
+    }
+
+    &:nth-child(1n + 10) .chapters__anchor:after {
+      content: '\00a7'counter(chapter-counter) '.';
+    }
+  }
+
+  &__anchor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $sp-sm 0;
+    font-size: $fs-md;
+
+    @include tablet-portrait-up {
+      font-size: $fs-lg;
+    }
+
+    @include tablet-landscape-up {
+      font-size: 48px;
+    }
+  }
+}

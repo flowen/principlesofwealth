@@ -15,7 +15,7 @@ import '../assets/scss/index.scss'
 // for hot-reloader to work - https://github.com/gaearon/react-hot-loader/issues/1088
 setConfig({ pureSFC: true })
 
-const Layout = ({ children }) => {
+const Layout = ({ children, className }) => {
   const { site } = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -79,7 +79,7 @@ const Layout = ({ children }) => {
         ]}
       ></Helmet>
 
-      <main className="layout">{children}</main>
+      <main className={`layout ${className}`}>{children}</main>
     </>
   )
 }

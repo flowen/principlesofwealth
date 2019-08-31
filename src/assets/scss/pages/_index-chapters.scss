@@ -1,0 +1,103 @@
+:root {
+  --columns: 5;
+  --gutter: 10px;
+
+  @include tablet-portrait-up {
+    --columns: 9;
+    --gutter: 20px;
+  }
+
+  @include tablet-landscape-up {
+    --columns: 12;
+  }
+}
+
+.index-page,
+.chapters-page,
+.content-page__header {
+  display: grid;
+  // formula: (window-width - gutter / columns) - gutter
+  // because there's less gutters then columns, we only subtract it once from the window-width
+  grid-template-columns: repeat(
+    var(--columns),
+    calc(((100vw - var(--gutter)) / var(--columns)) - var(--gutter))
+  );
+  grid-gap: var(--gutter);
+
+  .nav {
+    grid-column: 1 / 6;
+    justify-self: end;
+  }
+
+  .title {
+    grid-column: 1 / 6;
+  }
+
+  .subtitle {
+    grid-column: 1 / 5;
+  }
+
+  .intro {
+    grid-column: 2 / 5;
+  }
+
+  .chapters {
+    grid-column: 1 / 6;
+  }
+
+  @include tablet-portrait-up {
+    grid-row-gap: calc(var(--gutter) * 2);
+
+    .nav {
+      grid-column: 8 / 10;
+      grid-row: 1 / 2;
+      align-self: end;
+      position: relative;
+      top: -45px;
+    }
+
+    .title {
+      grid-column: 2 / 10;
+      grid-row: 1 / 2;
+    }
+
+    .subtitle {
+      grid-column: 2 / 9;
+    }
+
+    .intro {
+      grid-column: 3 / 6;
+    }
+
+    .chapters {
+      grid-column: 2 / -2;
+    }
+  }
+
+  @include tablet-landscape-up {
+    .nav {
+      grid-column: 9 / 11;
+      grid-row: 1 / 2;
+      top: -15%;
+    }
+
+    .title {
+      grid-column: 2 / 11;
+      grid-row: 1 / 2;
+    }
+
+    .subtitle {
+      grid-column: 3 / 7;
+      grid-row: 2 / 3;
+    }
+
+    .intro {
+      grid-column: 5 / 9;
+      font-size: $fs-lg;
+    }
+
+    .chapters {
+      grid-column-end: -3;
+    }
+  }
+}

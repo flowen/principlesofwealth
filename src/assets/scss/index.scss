@@ -10,7 +10,6 @@
 @import 'common/colors';
 @import 'common/breakpoint-mixins';
 @import 'common/font-mixins';
-@import 'common/fluid-font-mixin';
 
 // Common
 @import 'common/base';
@@ -19,11 +18,9 @@
 
 // Components
 @import 'components/layout';
-// @import 'components/footer';
-// @import 'components/logo';
-// @import 'components/intro';
-// @import 'components/do-and-dare';
-// @import 'components/what-i-do';
-// @import 'components/featured';
-// @import 'components/blog';
-// @import 'components/outro';
+@import 'components/nav';
+@import 'components/chapters';
+
+// pages
+@import 'pages/index-chapters';
+@import 'pages/content';

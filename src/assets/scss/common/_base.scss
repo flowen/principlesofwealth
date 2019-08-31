@@ -101,14 +101,10 @@ h4,
 }
 
 p {
-  margin: 0 0 $sp-md;
+  margin: 0 0 $sp-base;
 
   &:last-child {
     margin-bottom: 0;
-  }
-
-  @include tablet-landscape-up {
-    margin-bottom: $sp-lg;
   }
 }
 
@@ -120,6 +116,9 @@ a {
   display: inline-block;
   color: $color-primary;
   text-decoration: none;
+  // text-decoration-color: #EA215A;
+  // text-decoration-thickness: .125em;
+  // text-underline-offset: 1.5px;
 
   &:focus {
     outline: 0;
