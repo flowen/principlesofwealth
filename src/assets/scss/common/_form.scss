@@ -26,8 +26,7 @@ form,
     display: block;
     width: 100%;
     margin: 0 0 $sp-xs;
-    padding: calc(#{$sp-xs} * var(--multiplier))
-             calc(#{$sp-xs / 2} * var(--multiplier));
+    padding: calc(#{$sp-xs} * var(--multiplier)) calc(#{$sp-xs / 2} * var(--multiplier));
 
     border: 2px solid transparent;
     border-bottom: 2px solid $color-white;
@@ -36,13 +35,12 @@ form,
     font-size: $fs-base;
     line-height: 1.5;
 
-    transition: border-color $d-normal $ease-out, 
-                       color $d-normal $ease-out;
+    transition: border-color $d-normal $ease-out, color $d-normal $ease-out;
 
-    @include tablet-portrait-up {
+    @include tablet-portrait {
       --multiplier: 2.5;
     }
-    @include tablet-landscape-up {
+    @include tablet-landscape {
       font-size: $fs-sm;
     }
 

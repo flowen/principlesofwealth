@@ -28,11 +28,11 @@
     padding: $sp-sm 0;
     font-size: $fs-md;
 
-    @include tablet-portrait-up {
+    @include tablet-portrait {
       font-size: $fs-lg;
     }
 
-    @include tablet-landscape-up {
+    @include tablet-landscape {
       font-size: 48px;
     }
   }

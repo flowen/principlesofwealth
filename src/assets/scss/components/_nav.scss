@@ -3,7 +3,7 @@
     display: flex;
     counter-reset: nav-counter;
 
-    @include tablet-portrait-up {
+    @include tablet-portrait {
       flex-direction: column;
     }
 
@@ -25,7 +25,7 @@
     position: relative;
     font-weight: 700;
 
-    @include tablet-portrait-up {
+    @include tablet-portrait {
       text-decoration: none;
 
       &::after {

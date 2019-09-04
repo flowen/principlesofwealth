@@ -1,25 +1,49 @@
 // breakpoint mixin
 // https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862
 @mixin mobile-only {
-  @media (max-width: 599px) {
+  @media screen and (max-width: 599px) {
     @content;
   }
 }
 
-@mixin tablet-portrait-up {
-  @media (min-width: 600px) {
+@mixin phone-xs {
+  @media screen and (min-width: 320px) {
     @content;
   }
 }
 
-@mixin tablet-landscape-up {
-  @media (min-width: 900px) {
+@mixin phone {
+  @media screen and (min-width: 480px) {
     @content;
   }
 }
 
-@mixin desktop-up {
-  @media (min-width: 1200px) {
+@mixin tablet-portrait {
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media screen and (min-width: 900px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin desktop-lg {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin desktop-xl {
+  @media screen and (min-width: 1800px) {
     @content;
   }
 }

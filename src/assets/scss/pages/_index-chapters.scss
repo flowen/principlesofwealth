@@ -1,13 +1,16 @@
 :root {
-  --columns: 5;
+  --columns: 4;
   --gutter: 10px;
 
-  @include tablet-portrait-up {
+  @include phone {
+  }
+
+  @include tablet-portrait {
     --columns: 9;
     --gutter: 20px;
   }
 
-  @include tablet-landscape-up {
+  @include tablet-landscape {
     --columns: 12;
   }
 }
@@ -45,7 +48,7 @@
     grid-column: 1 / 6;
   }
 
-  @include tablet-portrait-up {
+  @include tablet-portrait {
     grid-row-gap: calc(var(--gutter) * 2);
 
     .nav {
@@ -74,7 +77,7 @@
     }
   }
 
-  @include tablet-landscape-up {
+  @include tablet-landscape {
     .nav {
       grid-column: 9 / 11;
       grid-row: 1 / 2;

@@ -2,7 +2,7 @@
   &__header {
     margin: 0 0 $sp-base;
 
-    @include tablet-portrait-up {
+    @include tablet-portrait {
       margin-bottom: $sp-lg;
       grid-row-gap: 0;
     }
@@ -15,17 +15,17 @@
     .title {
       font-size: 50px;
 
-      @include tablet-portrait-up {
+      @include tablet-portrait {
         grid-column: 2 / 7;
         font-size: 80px;
       }
 
-      @include tablet-landscape-up {
+      @include tablet-landscape {
         font-size: 110px;
       }
     }
 
-    @include tablet-landscape-up {
+    @include tablet-landscape {
       .subtitle {
         grid-column-start: 2;
       }
@@ -33,7 +33,7 @@
   }
 
   &__article-wrapper {
-    @include tablet-portrait-up {
+    @include tablet-portrait {
       display: grid;
       grid-template-columns: repeat(
         var(--columns),
@@ -44,13 +44,13 @@
   }
 
   &__article {
-    @include tablet-portrait-up {
+    @include tablet-portrait {
       grid-column: 2 / -3;
       columns: 2;
       column-gap: var(--gutter);
     }
 
-    @include tablet-landscape-up {
+    @include tablet-landscape {
       columns: 3;
     }
   }
