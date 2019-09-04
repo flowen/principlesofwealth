@@ -55,7 +55,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
-  padding: var(--gutter);
+  padding: $sp-base;
   background-color: $color-blue;
   color: $color-primary;
   @include font-base;
@@ -172,7 +172,4 @@ figcaption {
 
 section {
   margin: 0 0 $sp-md;
-  //   position: relative;
-  //   padding: 25vmin 0;
-  //   max-width: 1440px;
 }

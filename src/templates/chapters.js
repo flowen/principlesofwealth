@@ -2,28 +2,16 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Nav from '../components/nav'
 
 const ChaptersPage = ({ pageContext }) => {
-  const { chapters } = pageContext
+  const { chapters, description } = pageContext
 
   return (
     <Layout className="chapters-page">
-      <SEO description="Chapters" />
+      <SEO description={description} />
 
-      <nav className="nav">
-        <ul className="nav__list">
-          <li className="nav__item">
-            <Link to="/" className="nav__anchor">
-              About
-            </Link>
-          </li>
-          <li className="nav__item">
-            <Link to="/chapters" className="nav__anchor">
-              Chapters
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      <Nav />
 
       <h1 className="title">
         Principles

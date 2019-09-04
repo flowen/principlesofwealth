@@ -3,6 +3,7 @@
   --gutter: 10px;
 
   @include phone {
+    --columns: 5;
   }
 
   @include tablet-portrait {
