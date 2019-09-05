@@ -63,28 +63,20 @@ $fs-xl: 4.8rem;
 }
 
 @mixin font-title {
-  display: grid;
-  align-items: end;
+  font-family: 'made_canvasblack', 'Abhaya Libre', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  color: $color-primary;
 
-  // this is a copy paste from the browser of the fluid-type output
-  // min-height: calc((50px + 160 * ((100vw - 320px) / 1120)) * 3);
+  $min_width: 320px;
+  $max_width: 1440px;
+  $min_font: 50px;
+  $max_font: 210px;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
 
-  h1 {
-    font-family: 'made_canvasblack', 'Abhaya Libre', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    color: $color-primary;
-
-    $min_width: 320px;
-    $max_width: 1440px;
-    $min_font: 50px;
-    $max_font: 210px;
-    @include fluid-type($min_width, $max_width, $min_font, $max_font);
-
-    @include tablet-portrait {
-      margin-bottom: 0;
-    }
+  @include tablet-portrait {
+    margin-bottom: 0;
   }
 }
 
