@@ -23,15 +23,15 @@ const AboutPage = () => (
 
     <div className="intro">
       <p>
-        This site is a summary of Naval's
+        This site is a summary of Naval's{' '}
         <a
           href="https://twitter.com/naval/status/1002103360646823936"
           target="_blank"
           rel="noopener noreferrer"
         >
-          tweetstorm
+          tweetstorm{' '}
         </a>
-        and
+        and{' '}
         <a href="https://nav.al/how-to-get-rich" target="_blank" rel="noopener noreferrer">
           podcast 'how to get rich'
         </a>
