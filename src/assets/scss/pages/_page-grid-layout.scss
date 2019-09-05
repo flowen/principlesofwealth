@@ -18,7 +18,7 @@
 
 .about-page,
 .chapters-page,
-.content-page__header {
+.content-page .header {
   display: grid;
   // formula: (window-width - (padding + (gutter * (columns - 1))) / columns) - gutter
   // because there's less gutters then columns, we only subtract it once from the window-width
@@ -41,10 +41,6 @@
     grid-column: 1 / -2;
   }
 
-  .intro {
-    grid-column: 2 / -2;
-  }
-
   .chapters {
     grid-column: 1 / -1;
   }
@@ -61,10 +57,6 @@
 
     .subtitle {
       grid-column: 1 / 5;
-    }
-
-    .intro {
-      grid-column: 2 / 5;
     }
 
     .chapters {
@@ -92,10 +84,6 @@
       grid-column: 2 / 9;
     }
 
-    .intro {
-      grid-column: 3 / 6;
-    }
-
     .chapters {
       grid-column: 2 / -2;
     }
@@ -116,11 +104,6 @@
     .subtitle {
       grid-column: 3 / 7;
       grid-row: 2 / 3;
-    }
-
-    .intro {
-      grid-column: 5 / 9;
-      font-size: $fs-lg;
     }
 
     .chapters {

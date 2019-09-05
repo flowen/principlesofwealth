@@ -10,9 +10,9 @@ const TemplateContent = ({ data }) => {
 
   return (
     <Layout className="content-page">
-      <SEO description="Content page" />
+      <SEO description={frontmatter.intro} />
 
-      <header className="content-page__header">
+      <header className="header">
         <Link className="logo">
           Principles
           <br /> of Wealth
@@ -26,9 +26,10 @@ const TemplateContent = ({ data }) => {
         <h2 className="subtitle">{frontmatter.subtitle}</h2>
       </header>
 
-      <div className="content-page__article-wrapper">
-        {frontmatter.description ? <p className="intro">{frontmatter.description}</p> : ''}
-        <article className="content-page__article" dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="article-wrapper">
+        {frontmatter.intro ? <p className="intro">{frontmatter.intro}</p> : ''}
+
+        <article className="article" dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </Layout>
   )
@@ -42,6 +43,7 @@ export const TemplateContentQuery = graphql`
         path
         title
         subtitle
+        intro
       }
       id
     }

@@ -1,5 +1,5 @@
 .content-page {
-  &__header {
+  .header {
     margin: 0 0 $sp-base;
     grid-row-gap: 0;
 
@@ -11,10 +11,10 @@
       grid-column: 1 / 2;
       grid-row: 1 / 1;
       margin: 0 0 $sp-xl;
+      font-size: 13px;
       font-weight: 700;
       text-align: right;
-
-      font-size: 13px;
+      text-decoration: none;
 
       @include tablet-portrait {
         margin-bottom: 0;
@@ -57,35 +57,46 @@
         grid-column-start: 2;
       }
     }
+  }
+
+  .article-wrapper {
+    display: grid;
+    grid-template-columns: repeat(
+      var(--columns),
+      calc(((100vw - 40px - (var(--gutter) * (var(--columns) - 1))) / var(--columns)))
+    );
+    grid-gap: var(--gutter);
 
     .intro {
-      grid-column: 2 / -1;
-      margin: 0 0 $sp-lg;
+      grid-column: 2 / -2;
+      margin: 0 0 $sp-md;
       padding: 0 0 $sp-sm;
       border-bottom: 1px solid rgba($color-primary, 0.3);
 
+      @include phone {
+        grid-column: 2 / 5;
+      }
+
+      @include tablet-portrait {
+        grid-column-end: 6;
+      }
+
       @include tablet-landscape {
-        grid-column-start: 2;
+        grid-column-end: 8;
+        font-size: $fs-md;
       }
     }
   }
 
-  &__article-wrapper {
-    @include tablet-portrait {
-      display: grid;
-      grid-template-columns: repeat(
-        var(--columns),
-        calc(((100vw - 40px - (var(--gutter) * (var(--columns) - 1))) / var(--columns)))
-      );
-      grid-gap: var(--gutter);
+  .article {
+    grid-column: 1 / -1;
+
+    @include phone {
+      grid-column-end: -2;
     }
-  }
-
-  &__article {
-    grid-column: 2 / -2;
 
     @include tablet-portrait {
-      grid-column: 2 / -3;
+      grid-column: 2 / -2;
       columns: 2;
       column-gap: var(--gutter);
     }

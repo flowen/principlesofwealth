@@ -9,11 +9,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         edges {
           node {
             frontmatter {
-              description
-              path
-              subtitle
-              title
               order
+              path
+              title
+              subtitle
+              intro
             }
             id
           }

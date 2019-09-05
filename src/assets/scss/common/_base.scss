@@ -137,44 +137,6 @@ sub {
   bottom: -0.25em;
 }
 
-blockquote {
-  margin: 0 0 $sp-lg;
-  padding: $sp-sm 0;
-  border-top: 3px solid rgba($color-primary, 0.3);
-  border-bottom: 3px solid rgba($color-primary, 0.3);
-  font-weight: 700;
-  font-size: $fs-md;
-  break-inside: avoid;
-
-  @include tablet-portrait {
-    padding-left: $sp-sm;
-    padding-right: $sp-sm;
-  }
-
-  &.column-span {
-    column-span: all;
-    margin-top: $sp-lg;
-  }
-
-  p:first-child {
-    &::before {
-      content: '\201C ';
-    }
-
-    &::after {
-      content: '\201D ';
-    }
-  }
-
-  cite {
-    font-style: normal;
-
-    &::before {
-      content: '\2013 ';
-    }
-  }
-}
-
 button {
   @include button-reset;
   color: $color-off-white;
@@ -202,6 +164,10 @@ nav {
   ul,
   ol {
     @extend %list-reset;
+  }
+
+  a {
+    text-decoration: none;
   }
 }
 
