@@ -56,7 +56,7 @@ const Layout = ({ children, className }) => {
             content: 'white',
           },
           { name: 'msapplication-TileColor', content: '#da532c' },
-          { name: 'theme-color', content: '#ffffff' },
+          { name: 'theme-color', content: '#412779' },
 
           { name: 'twitter:card', content: 'summary_large_image' },
           { name: 'twitter:site', content: twitter_handle },
