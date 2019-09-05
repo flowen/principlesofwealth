@@ -177,13 +177,19 @@ ol {
   padding: 0;
 }
 
+ul {
+  list-style: none;
+  margin-left: 1em;
+  list-style: upper-roman;
+}
+
 p,
 figure,
 blockquote,
 ul,
 ol,
 ol li {
-  margin: 0 0 $sp-base;
+  margin-bottom: $sp-base;
 
   &:last-child {
     margin-bottom: 0;

@@ -91,6 +91,10 @@
   .article {
     grid-column: 1 / -1;
 
+    > *:first-child {
+      margin-top: 0;
+    }
+
     @include phone {
       grid-column-end: -2;
     }

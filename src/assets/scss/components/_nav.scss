@@ -38,6 +38,7 @@
         top: 2px;
         left: -40px;
         opacity: 0;
+        transition: opacity $d-slow $ease-in;
       }
 
       &[aria-current='page']::after {

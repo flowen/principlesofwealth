@@ -1,4 +1,5 @@
 blockquote {
+  margin: 0 0 $sp-base;
   padding: $sp-sm 0;
   border-top: 3px solid rgba($color-primary, 0.3);
   border-bottom: 3px solid rgba($color-primary, 0.3);
@@ -11,13 +12,17 @@ blockquote {
     padding-right: $sp-sm;
   }
 
-  p:first-child {
-    &::before {
-      content: '\201C ';
-    }
+  p {
+    margin-top: 0;
 
-    &::after {
-      content: '\201D ';
+    &:first-child {
+      &::before {
+        content: '\201C ';
+      }
+
+      &::after {
+        content: '\201D ';
+      }
     }
   }
 
@@ -32,10 +37,7 @@ blockquote {
   &.column-span {
     column-span: all;
     margin-top: $sp-lg;
-
-    &:first-child {
-      margin-top: 0;
-    }
+    margin-bottom: $sp-lg;
 
     & + h1,
     & + h2,

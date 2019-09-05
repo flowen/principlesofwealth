@@ -23,16 +23,19 @@ const AboutPage = () => (
 
     <div className="intro">
       <p>
-        This site is a summary of Naval's famous{' '}
+        This site is a summary of Naval's
         <a
           href="https://twitter.com/naval/status/1002103360646823936"
           target="_blank"
           rel="noopener noreferrer"
         >
           tweetstorm
-        </a>{' '}
-        and podcast 'how to get rich'. Which started out as several tweetstorms, the podcast dove
-        deep into each tweet.{' '}
+        </a>
+        and
+        <a href="https://nav.al/how-to-get-rich" target="_blank" rel="noopener noreferrer">
+          podcast 'how to get rich'
+        </a>
+        . Which started out as several tweetstorms, the podcast dove deep into each tweet.
       </p>
       <p>
         But Podcasts are slow to consume. Reading is faster than listening and a summary is even
@@ -43,13 +46,8 @@ const AboutPage = () => (
         front-end developer.
       </p>
       <p>
-        <a
-          href="https://flowen.me/"
-          target="_blank"
-          rel="noopener noreferrer external"
-          className="link-cta"
-        >
-          If you’re interested in working with me.
+        <a href="https://flowen.me/" target="_blank" rel="noopener noreferrer external">
+          Made by Rou Hun Fan
         </a>
       </p>
       <p>

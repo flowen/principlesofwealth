@@ -1,11 +1,8 @@
 .link-cta {
-  display: flex;
+  display: inline-flex;
+  align-items: center;
   font-weight: 700;
   text-decoration: none;
-
-  @include tablet-landscape {
-    align-items: baseline;
-  }
 
   &::before {
     content: '';
@@ -14,9 +11,14 @@
     height: 17px;
     margin: 0 $sp-xs 0 #{($sp-xs + $width) * -1};
     background: url('../svg/arrow.svg') no-repeat left center;
+    transition: transform $d-normal $ease-out;
   }
 
   &:hover {
     text-decoration: none;
+
+    &::before {
+      transform: translateX(160px);
+    }
   }
 }
