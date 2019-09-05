@@ -24,6 +24,7 @@
   &__anchor {
     position: relative;
     font-weight: 700;
+    white-space: nowrap;
 
     @include tablet-portrait {
       text-decoration: none;

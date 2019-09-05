@@ -103,9 +103,9 @@
 
   @include tablet-landscape {
     .nav {
-      grid-column: 10 / 12;
+      grid-column: 11 / 12;
       grid-row: 1 / 2;
-      top: -28px;
+      top: -30px;
     }
 
     .title {

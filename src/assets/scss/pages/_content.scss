@@ -11,12 +11,17 @@
       grid-column: 1 / 2;
       grid-row: 1 / 1;
       margin: 0 0 $sp-xl;
-      font-size: 13px;
       font-weight: 700;
       text-align: right;
 
+      font-size: 13px;
+
       @include tablet-portrait {
         margin-bottom: 0;
+      }
+
+      @include desktop {
+        font-size: $fs-base;
       }
     }
 
@@ -25,8 +30,11 @@
       grid-row: 1 / 1;
 
       &__anchor {
-        font-size: 13px;
         white-space: nowrap;
+
+        @include mobile-only {
+          font-size: 13px;
+        }
       }
     }
 

@@ -22,38 +22,44 @@ $fs-xl: 4.8rem;
 @mixin font-heading {
   font-family: $heading-font;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-display: swap;
   color: $color-heading;
   line-height: 1;
-  margin: 0 0 $sp-base;
+  margin: $sp-base 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  break-inside: avoid;
+  break-after: avoid;
+
+  &:first-child {
+    margin-top: 0;
+  }
 
   @include tablet-landscape {
-    margin-bottom: $sp-md;
+    margin-top: $sp-md;
+    margin-bottom: $sp-sm;
   }
 
   @include desktop {
-    margin-bottom: $sp-lg;
+    margin-top: $sp-lg;
+    margin-bottom: $sp-md;
   }
 }
 
 @mixin font-h1 {
-  margin: 0 0 $sp-sm;
   font-size: $fs-lg;
 }
 
 @mixin font-h2 {
-  margin: 0 0 $sp-sm;
   font-size: $fs-md;
 }
 
 @mixin font-h3 {
-  margin: 0 0 $sp-sm;
   font-size: $fs-md;
 }
 
 @mixin font-h4 {
-  margin: 0 0 $sp-sm;
   font-size: $fs-md;
 }
 
@@ -63,6 +69,7 @@ $fs-xl: 4.8rem;
 }
 
 @mixin font-title {
+  margin-top: 0;
   font-family: 'made_canvasblack', 'Abhaya Libre', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -72,7 +79,7 @@ $fs-xl: 4.8rem;
   $min_width: 320px;
   $max_width: 1440px;
   $min_font: 50px;
-  $max_font: 210px;
+  $max_font: 175px;
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
 
   @include tablet-portrait {
