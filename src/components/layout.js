@@ -63,7 +63,7 @@ const Layout = ({ children, className }) => {
           { name: 'twitter:creator', content: twitter_handle },
           { name: 'twitter:title', content: title },
           { name: 'twitter:description', content: description },
-          { name: 'twitter:image:src', content: twitterCard },
+          { name: 'twitter:image:src', content: siteUrl + twitterCard },
           { name: 'twitter:url', content: siteUrl },
 
           { property: 'og:title', content: title },
