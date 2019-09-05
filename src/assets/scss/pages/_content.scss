@@ -1,34 +1,62 @@
 .content-page {
   &__header {
     margin: 0 0 $sp-base;
+    grid-row-gap: 0;
 
     @include tablet-portrait {
       margin-bottom: $sp-lg;
-      grid-row-gap: 0;
     }
 
     .logo {
+      grid-column: 1 / 2;
+      grid-row: 1 / 1;
+      margin: 0 0 $sp-xl;
       font-size: 13px;
       font-weight: 700;
-      grid-column: 1 / 2;
       text-align: right;
+
+      @include tablet-portrait {
+        margin-bottom: 0;
+      }
+    }
+
+    .nav {
+      grid-column: -2 / -1;
+      grid-row: 1 / 1;
+
+      &__anchor {
+        font-size: 13px;
+        white-space: nowrap;
+      }
     }
 
     .title {
-      font-size: 50px;
-
       @include tablet-portrait {
-        grid-column: 2 / 7;
-        font-size: 80px;
+        grid-column: 2 / 8;
       }
 
-      @include tablet-landscape {
-        font-size: 110px;
+      h1 {
+        @include tablet-portrait {
+          margin-bottom: 0;
+        }
       }
     }
 
-    @include tablet-landscape {
-      .subtitle {
+    .subtitle {
+      margin: 0 0 $sp-xl;
+
+      @include tablet-landscape {
+        grid-column-start: 2;
+      }
+    }
+
+    .intro {
+      grid-column: 2 / -1;
+      margin: 0 0 $sp-lg;
+      padding: 0 0 $sp-sm;
+      border-bottom: 1px solid rgba($color-primary, 0.3);
+
+      @include tablet-landscape {
         grid-column-start: 2;
       }
     }
@@ -39,13 +67,15 @@
       display: grid;
       grid-template-columns: repeat(
         var(--columns),
-        calc(((100vw - var(--gutter)) / var(--columns)) - var(--gutter))
+        calc(((100vw - 40px - (var(--gutter) * (var(--columns) - 1))) / var(--columns)))
       );
       grid-gap: var(--gutter);
     }
   }
 
   &__article {
+    grid-column: 2 / -2;
+
     @include tablet-portrait {
       grid-column: 2 / -3;
       columns: 2;

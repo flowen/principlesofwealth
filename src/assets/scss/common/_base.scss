@@ -69,6 +69,7 @@ h3,
 .h3,
 h4,
 .h4 {
+  break-inside: avoid;
   @include font-heading;
 }
 
@@ -98,14 +99,6 @@ h4,
 
 .subtitle {
   @include font-subtitle;
-}
-
-p {
-  margin: 0 0 $sp-base;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 strong {
@@ -140,13 +133,42 @@ sup {
 sup {
   top: -1em;
 }
+
 sub {
   bottom: -0.25em;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+blockquote {
+  margin: 0 0 $sp-lg;
+  padding: $sp-sm 0;
+  border-top: 3px solid rgba($color-primary, 0.3);
+  border-bottom: 3px solid rgba($color-primary, 0.3);
+  font-weight: 700;
+  font-size: $fs-md;
+  break-inside: avoid;
+
+  @include tablet-portrait {
+    padding-left: $sp-sm;
+    padding-right: $sp-sm;
+  }
+
+  p:first-child {
+    &::before {
+      content: '\201C ';
+    }
+
+    &::after {
+      content: '\201D ';
+    }
+  }
+
+  cite {
+    font-style: normal;
+
+    &::before {
+      content: '\2013 ';
+    }
+  }
 }
 
 button {
@@ -154,11 +176,9 @@ button {
   color: $color-off-white;
 }
 
-nav {
-  ul,
-  ol {
-    @extend %list-reset;
-  }
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 figure {
@@ -172,4 +192,29 @@ figcaption {
 
 section {
   margin: 0 0 $sp-md;
+}
+
+nav {
+  ul,
+  ol {
+    @extend %list-reset;
+  }
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+figure,
+blockquote,
+ul li,
+ol li {
+  margin: 0 0 $sp-base;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }

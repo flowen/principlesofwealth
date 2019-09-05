@@ -13,6 +13,10 @@ $fs-xl: 4.8rem;
   font-display: swap;
   font-size: $fs-base;
   line-height: 1.2;
+
+  @include tablet-landscape {
+    font-size: 19px;
+  }
 }
 
 @mixin font-heading {
@@ -21,6 +25,7 @@ $fs-xl: 4.8rem;
   font-weight: 400;
   font-display: swap;
   color: $color-heading;
+  line-height: 1;
   margin: 0 0 $sp-base;
 
   @include tablet-landscape {
@@ -35,25 +40,21 @@ $fs-xl: 4.8rem;
 @mixin font-h1 {
   margin: 0 0 $sp-sm;
   font-size: $fs-lg;
-  line-height: 1.2;
 }
 
 @mixin font-h2 {
   margin: 0 0 $sp-sm;
   font-size: $fs-md;
-  line-height: 1.667;
 }
 
 @mixin font-h3 {
   margin: 0 0 $sp-sm;
   font-size: $fs-md;
-  line-height: 1.667;
 }
 
 @mixin font-h4 {
   margin: 0 0 $sp-sm;
   font-size: $fs-md;
-  line-height: 1.667;
 }
 
 @mixin font-strong {
@@ -62,17 +63,29 @@ $fs-xl: 4.8rem;
 }
 
 @mixin font-title {
-  font-family: 'made_canvasblack', 'Abhaya Libre', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  color: $color-primary;
+  display: grid;
+  align-items: end;
 
-  $min_width: 320px;
-  $max_width: 1440px;
-  $min_font: 50px;
-  $max_font: 210px;
-  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  // this is a copy paste from the browser of the fluid-type output
+  // min-height: calc((50px + 160 * ((100vw - 320px) / 1120)) * 3);
+
+  h1 {
+    font-family: 'made_canvasblack', 'Abhaya Libre', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    color: $color-primary;
+
+    $min_width: 320px;
+    $max_width: 1440px;
+    $min_font: 50px;
+    $max_font: 210px;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+
+    @include tablet-portrait {
+      margin-bottom: 0;
+    }
+  }
 }
 
 @mixin font-subtitle {
