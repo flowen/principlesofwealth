@@ -27,7 +27,7 @@ const AboutPage = () => (
         <a
           href="https://twitter.com/naval/status/1002103360646823936"
           target="_blank"
-          rel="nofollower no"
+          rel="noopener noreferrer"
         >
           tweetstorm
         </a>{' '}
