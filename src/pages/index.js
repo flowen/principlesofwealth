@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Nav from '../components/nav'
 
-const IndexPage = () => (
-  <Layout className="index-page">
+const AboutPage = () => (
+  <Layout className="about-page">
     <SEO
       title="Principles of Wealth .net"
       description="A summary of Naval Ravikant’s tweetstorms and podcast"
@@ -33,10 +34,23 @@ const IndexPage = () => (
         I wrote this out of my own interest and wanted to showcase my skills as a designer and
         front-end developer.
       </p>
-      <p>If you’re interested in working with me.</p>
-      <p>Enjoy reading</p>
+      <p>
+        <a
+          href="https://flowen.me/"
+          target="_blank"
+          rel="noopener noreferrer external"
+          className="link-cta"
+        >
+          If you’re interested in working with me.
+        </a>
+      </p>
+      <p>
+        <Link to="chapters" className="link-cta">
+          Enjoy reading
+        </Link>
+      </p>
     </div>
   </Layout>
 )
 
-export default IndexPage
+export default AboutPage

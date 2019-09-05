@@ -20,7 +20,9 @@
 @import 'components/layout';
 @import 'components/nav';
 @import 'components/chapters';
+@import 'components/link-cta';
 
 // pages
-@import 'pages/index-chapters';
-@import 'pages/content';
+@import 'pages/page-grid-layout';
+@import 'pages/page-about';
+@import 'pages/page-content';

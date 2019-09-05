@@ -1,0 +1,22 @@
+.link-cta {
+  display: flex;
+  font-weight: 700;
+  text-decoration: none;
+
+  @include tablet-landscape {
+    align-items: baseline;
+  }
+
+  &::before {
+    content: '';
+    $width: 3.7rem;
+    min-width: $width;
+    height: 17px;
+    margin: 0 $sp-xs 0 #{($sp-xs + $width) * -1};
+    background: url('../svg/arrow.svg') no-repeat left center;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}

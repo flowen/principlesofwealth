@@ -2,6 +2,7 @@ $primary-font: 'Abhaya Libre', serif;
 $heading-font: $primary-font;
 
 $fs-base: 1.7rem;
+$fs-sm: 2.1rem;
 $fs-md: 2.4rem;
 $fs-lg: 3.2rem;
 $fs-xl: 4.8rem;
@@ -56,11 +57,12 @@ $fs-xl: 4.8rem;
 }
 
 @mixin font-h3 {
-  font-size: $fs-md;
+  font-size: $fs-sm;
 }
 
 @mixin font-h4 {
-  font-size: $fs-md;
+  font-size: $fs-sm;
+  font-weight: 400;
 }
 
 @mixin font-strong {

@@ -1,0 +1,7 @@
+.layout {
+  margin: 0 0 $sp-lg;
+
+  @include tablet-portrait {
+    margin-bottom: $sp-xl;
+  }
+}

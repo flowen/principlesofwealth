@@ -107,17 +107,17 @@ strong {
 a {
   display: inline-block;
   color: $color-primary;
-  text-decoration: none;
-  // text-decoration-color: #EA215A;
-  // text-decoration-thickness: .125em;
-  // text-underline-offset: 1.5px;
+  text-decoration: underline;
+  text-decoration-color: $color-primary;
+  text-decoration-thickness: 0.125em;
+  text-underline-offset: 2px;
 
   &:focus {
     outline: 0;
   }
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
@@ -209,6 +209,7 @@ ul,
 ol {
   margin: 0;
   padding: 0;
+  list-style: upper-roman;
 }
 
 p,
