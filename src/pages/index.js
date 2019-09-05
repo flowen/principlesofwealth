@@ -19,12 +19,20 @@ const AboutPage = () => (
       <br /> .net
     </h1>
 
-    <h2 className="subtitle">A summary of Naval Ravikant’s tweetstorms and podcast</h2>
+    <h2 className="subtitle">A summary of Naval Ravikant’s tweetstorms and podcasts</h2>
 
     <div className="intro">
       <p>
-        This site is a summary of Naval's famous podcast 'how to get rich'. Which started out as
-        several tweetstorms, the podcast dove deep into each tweet.{' '}
+        This site is a summary of Naval's famous{' '}
+        <a
+          href="https://twitter.com/naval/status/1002103360646823936"
+          target="_blank"
+          rel="nofollower no"
+        >
+          tweetstorm
+        </a>{' '}
+        and podcast 'how to get rich'. Which started out as several tweetstorms, the podcast dove
+        deep into each tweet.{' '}
       </p>
       <p>
         But Podcasts are slow to consume. Reading is faster than listening and a summary is even

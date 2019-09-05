@@ -1,2 +1,31 @@
 .about-page {
+  .nav {
+    margin: 0 0 $sp-lg;
+
+    @include tablet-portrait {
+      margin-bottom: 0;
+    }
+  }
+
+  .subtitle {
+    @include phone {
+      grid-column-end: 4;
+    }
+  }
+
+  .intro {
+    grid-column: 2 / -2;
+
+    @include phone {
+      grid-column: 2 / 5;
+    }
+
+    @include tablet-portrait {
+      grid-column: 3 / 6;
+    }
+
+    @include tablet-landscape {
+      grid-column: 5 / 9;
+    }
+  }
 }
