@@ -5,15 +5,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   await graphql(`
     {
-      allMarkdownRemark(sort: { fields: id, order: ASC }) {
+      allMarkdownRemark(sort: { fields: frontmatter___order, order: ASC }) {
         edges {
           node {
-            html
             frontmatter {
               description
               path
               subtitle
               title
+              order
             }
             id
           }
@@ -27,7 +27,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
 
     /**
-     * @description create chapter pages
+     * @description create content pages
      */
 
     const nodes = result.data.allMarkdownRemark.edges
@@ -40,6 +40,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         },
       })
     })
+
+    /**
+     * @description create chapters page
+     */
 
     createPage({
       path: '/chapters/',
