@@ -67,7 +67,7 @@ module.exports = {
         short_name: `wealth`,
         start_url: `/`,
         background_color: `#412779`,
-        theme_color: `#EC9B9B`,
+        theme_color: `#412779`,
         display: `minimal-ui`,
         icon: `src/assets/favicon/favicon-32x32.png`, // This path is relative to the root of the site.
       },
