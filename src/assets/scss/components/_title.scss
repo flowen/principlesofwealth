@@ -1,0 +1,25 @@
+.title {
+  &.splitting .char {
+  }
+
+  &.show {
+    .char {
+      transform: translateY(0);
+    }
+  }
+}
+
+.word {
+  overflow: hidden;
+
+  .char {
+    transition: transform $d-slower calc(var(--char-index) * 0.035s) $ease-in-out;
+    transform: translateY(100%);
+  }
+}
+
+.whitespace {
+  display: inline-block;
+  width: 2vw;
+  // line-height: 0;
+}

@@ -9,7 +9,7 @@ import twitterCard from '../assets/cards/twitter-card.png'
 import ogCard from '../assets/cards/og-card.png'
 
 import '../assets/scss/index.scss'
-// import 'splitting/dist/splitting.css'
+import 'splitting/dist/splitting.css'
 // import 'splitting/dist/splitting-cells.css'
 
 // for hot-reloader to work - https://github.com/gaearon/react-hot-loader/issues/1088

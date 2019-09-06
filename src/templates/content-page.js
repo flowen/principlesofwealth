@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useLayoutEffect, useEffect } from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Nav from '../components/nav'
+
+import Splitting from 'splitting'
 
 const TemplateContent = ({ data, pageContext }) => {
   const { markdownRemark } = data
@@ -14,6 +16,17 @@ const TemplateContent = ({ data, pageContext }) => {
   } = next || {
     frontmatter: { path: null, title: null },
   }
+
+  useLayoutEffect(() => {
+    Splitting({ by: 'chars' })
+  })
+
+  useEffect(() => {
+    document.querySelector('.title').classList.add('show')
+    return () => {
+      document.querySelector('.title').classList.remove('show')
+    }
+  }, [])
 
   return (
     <Layout className="content-page">
@@ -28,7 +41,9 @@ const TemplateContent = ({ data, pageContext }) => {
 
         <Nav />
 
-        <h1 className="title">{frontmatter.title}</h1>
+        <h1 className="title" data-splitting="">
+          {frontmatter.title}
+        </h1>
 
         <h2 className="subtitle">{frontmatter.subtitle}</h2>
       </header>
@@ -42,7 +57,7 @@ const TemplateContent = ({ data, pageContext }) => {
       {path !== null || title !== null ? (
         <Link to={path} className="link-next">
           <div className="link-next__label">Read on</div>
-          <div className="link-next__title"> {title} </div>
+          <div className="link-next__title">{title}</div>
         </Link>
       ) : null}
     </Layout>

@@ -7,6 +7,11 @@
   text-align: center;
   text-decoration: none;
 
+  @include tablet-landscape {
+    margin-top: $sp-xl;
+    margin-bottom: $sp-xl;
+  }
+
   &__label {
     width: 100%;
     max-width: calc((100vw) / var(--columns) * 3);

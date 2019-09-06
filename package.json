@@ -15,10 +15,12 @@
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-source-filesystem": "^2.1.11",
     "gatsby-transformer-remark": "^2.6.19",
+    "intersection-observer": "^0.7.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "splitting": "^1.0.6"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
