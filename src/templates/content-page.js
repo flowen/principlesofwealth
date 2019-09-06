@@ -4,7 +4,11 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Nav from '../components/nav'
 
-import Splitting from 'splitting'
+// import Splitting from 'splitting'
+
+if (typeof window !== `undefined`) {
+  const Splitting = require('splitting')
+}
 
 const TemplateContent = ({ data, pageContext }) => {
   const { markdownRemark } = data
@@ -41,9 +45,7 @@ const TemplateContent = ({ data, pageContext }) => {
 
         <Nav />
 
-        <h1 className="title" data-splitting="">
-          {frontmatter.title}
-        </h1>
+        <h1 className="title">{frontmatter.title}</h1>
 
         <h2 className="subtitle">{frontmatter.subtitle}</h2>
       </header>
