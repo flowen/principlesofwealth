@@ -1,25 +1,17 @@
-.title {
-  &.splitting .char {
-  }
-
-  &.show {
-    .char {
-      transform: translateY(0);
-    }
-  }
-}
-
 .word {
   overflow: hidden;
+  margin-bottom: -0.2em; // fix a weird line-height bug due to Splitting
 
   .char {
     transition: transform $d-slower calc(var(--char-index) * 0.035s) $ease-in-out;
     transform: translateY(100%);
   }
-}
 
-.whitespace {
-  display: inline-block;
-  width: 2vw;
-  // line-height: 0;
+  .show & .char {
+    transform: translateY(0);
+  }
+
+  .leave & .char {
+    transform: translateY(-100%);
+  }
 }

@@ -3,8 +3,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Nav from '../components/nav'
-
-// import Splitting from 'splitting'
+import LinkNext from '../components/link-next'
 
 let Splitting
 if (typeof window !== `undefined`) {
@@ -29,7 +28,7 @@ const TemplateContent = ({ data, pageContext }) => {
   useEffect(() => {
     const title = document.querySelector('.title')
     title.classList.add('show')
-    console.log(title)
+
     return () => {
       title.classList.remove('show')
     }
@@ -61,12 +60,8 @@ const TemplateContent = ({ data, pageContext }) => {
         <article className="article" dangerouslySetInnerHTML={{ __html: html }} />
       </div>
 
-      {path !== null || title !== null ? (
-        <Link to={path} className="link-next">
-          <div className="link-next__label">Read on</div>
-          <div className="link-next__title">{title}</div>
-        </Link>
-      ) : null}
+      {/* {path !== null || title !== null ? <LinkNext path title /> : null} */}
+      <LinkNext path={path} title={title} />
     </Layout>
   )
 }
