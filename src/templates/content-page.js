@@ -6,8 +6,9 @@ import Nav from '../components/nav'
 
 // import Splitting from 'splitting'
 
+let Splitting
 if (typeof window !== `undefined`) {
-  const Splitting = require('splitting')
+  Splitting = require('splitting')
 }
 
 const TemplateContent = ({ data, pageContext }) => {
