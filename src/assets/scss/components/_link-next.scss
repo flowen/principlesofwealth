@@ -1,0 +1,35 @@
+.link-next {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: $sp-lg 0;
+  text-align: center;
+  text-decoration: none;
+
+  &__label {
+    width: 100%;
+    margin: 0 0 $sp-base;
+    padding: 0 0 $sp-base;
+    border-bottom: 1px solid rgba($color-primary, 0.3);
+    font-family: $primary-font;
+    font-weight: 700;
+    font-size: $fs-base;
+    letter-spacing: 0.445em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: $fs-lg;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    &::before {
+      transform: translateX(25%);
+    }
+  }
+}

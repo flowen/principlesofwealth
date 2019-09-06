@@ -40,7 +40,7 @@
 
     .title {
       @include tablet-portrait {
-        grid-column: 2 / 8;
+        grid-column: 2 / 10;
       }
 
       h1 {

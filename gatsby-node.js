@@ -8,14 +8,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       allMarkdownRemark(sort: { fields: frontmatter___order, order: ASC }) {
         edges {
           node {
+            id
             frontmatter {
+              intro
+              path
+              subtitle
+              title
               order
+            }
+          }
+          next {
+            frontmatter {
               path
               title
-              subtitle
-              intro
             }
-            id
           }
         }
       }
@@ -31,12 +37,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
      */
 
     const nodes = result.data.allMarkdownRemark.edges
-    nodes.forEach(({ node }) => {
+
+    nodes.forEach(({ node, next }) => {
       createPage({
         path: node.frontmatter.path,
         component: path.resolve(`src/templates/content-page.js`),
         context: {
           id: node.id,
+          next: next,
         },
       })
     })

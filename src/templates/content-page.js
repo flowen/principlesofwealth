@@ -4,9 +4,16 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Nav from '../components/nav'
 
-const TemplateContent = ({ data }) => {
+const TemplateContent = ({ data, pageContext }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
+  const { next } = pageContext
+
+  const {
+    frontmatter: { path, title },
+  } = next || {
+    frontmatter: { path: null, title: null },
+  }
 
   return (
     <Layout className="content-page">
@@ -31,6 +38,13 @@ const TemplateContent = ({ data }) => {
 
         <article className="article" dangerouslySetInnerHTML={{ __html: html }} />
       </div>
+
+      {path !== null || title !== null ? (
+        <Link to={path} className="link-next">
+          <div className="link-next__label">Read on</div>
+          <div className="link-next__title"> {title} </div>
+        </Link>
+      ) : null}
     </Layout>
   )
 }
@@ -38,6 +52,7 @@ const TemplateContent = ({ data }) => {
 export const TemplateContentQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
+      id
       html
       frontmatter {
         path
@@ -45,7 +60,6 @@ export const TemplateContentQuery = graphql`
         subtitle
         intro
       }
-      id
     }
   }
 `

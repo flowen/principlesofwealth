@@ -1,4 +1,5 @@
 $primary-font: 'Abhaya Libre', serif;
+$secondary-font: 'made_canvasblack', $primary-font;
 $heading-font: $primary-font;
 
 $fs-base: 1.7rem;
@@ -72,7 +73,7 @@ $fs-xl: 4.8rem;
 
 @mixin font-title {
   margin-top: 0;
-  font-family: 'made_canvasblack', 'Abhaya Libre', sans-serif;
+  font-family: $secondary-font;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -90,7 +91,7 @@ $fs-xl: 4.8rem;
 }
 
 @mixin font-subtitle {
-  font-family: 'Abhaya Libre', sans-serif;
+  font-family: $primary-font;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
