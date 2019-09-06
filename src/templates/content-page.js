@@ -27,9 +27,11 @@ const TemplateContent = ({ data, pageContext }) => {
   })
 
   useEffect(() => {
-    document.querySelector('.title').classList.add('show')
+    const title = document.querySelector('.title')
+    title.classList.add('show')
+    console.log(title)
     return () => {
-      document.querySelector('.title').classList.remove('show')
+      title.classList.remove('show')
     }
   }, [])
 
@@ -38,7 +40,7 @@ const TemplateContent = ({ data, pageContext }) => {
       <SEO description={frontmatter.intro} />
 
       <header className="header">
-        <Link className="logo">
+        <Link className="logo" to="/">
           Principles
           <br /> of Wealth
           <br /> .net
@@ -46,7 +48,9 @@ const TemplateContent = ({ data, pageContext }) => {
 
         <Nav />
 
-        <h1 className="title">{frontmatter.title}</h1>
+        <h1 className="title" data-splitting="">
+          {frontmatter.title}
+        </h1>
 
         <h2 className="subtitle">{frontmatter.subtitle}</h2>
       </header>
