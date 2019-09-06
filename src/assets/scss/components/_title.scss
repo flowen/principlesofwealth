@@ -1,6 +1,6 @@
 .word {
   overflow: hidden;
-  margin-bottom: -0.2em; // fix a weird line-height bug due to Splitting
+  margin-bottom: -0.25em; // fix a weird line-height bug due to Splitting
 
   .char {
     transition: transform $d-slower calc(var(--char-index) * 0.035s) $ease-in-out;

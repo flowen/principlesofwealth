@@ -51,7 +51,7 @@ const TemplateContent = ({ data, pageContext }) => {
           {frontmatter.title}
         </h1>
 
-        <h2 className="subtitle">{frontmatter.subtitle}</h2>
+        {frontmatter.subtitle ? <h2 className="subtitle">{frontmatter.subtitle}</h2> : ''}
       </header>
 
       <div className="article-wrapper">

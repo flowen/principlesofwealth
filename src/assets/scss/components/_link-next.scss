@@ -3,12 +3,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: $sp-lg 0;
+  margin: $sp-lg * 2 0 $sp-lg;
   text-align: center;
   text-decoration: none;
 
   @include tablet-landscape {
-    margin-top: $sp-xl;
+    margin-top: $sp-xl * 2;
     margin-bottom: $sp-xl;
   }
 

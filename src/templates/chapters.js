@@ -5,11 +5,11 @@ import SEO from '../components/seo'
 import Nav from '../components/nav'
 
 const ChaptersPage = ({ pageContext }) => {
-  const { chapters, description } = pageContext
+  const { chapters } = pageContext
 
   return (
     <Layout className="chapters-page">
-      <SEO description={description} />
+      <SEO title="Chapters" description="The chapters" />
 
       <Nav />
 
