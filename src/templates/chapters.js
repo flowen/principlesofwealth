@@ -44,4 +44,5 @@ const ChaptersPage = ({ pageContext }) => {
     </Layout>
   )
 }
+
 export default ChaptersPage

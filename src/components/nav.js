@@ -10,7 +10,7 @@ const Nav = () => (
         </Link>
       </li>
       <li className="nav__item">
-        <Link to="/chapters" className="nav__anchor">
+        <Link to="/chapters/" className="nav__anchor">
           Chapters
         </Link>
       </li>

@@ -27,12 +27,12 @@ const AboutPage = () => (
         <a
           href="https://twitter.com/naval/status/1002103360646823936"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer external"
         >
-          tweetstorm{' '}
-        </a>
+          tweetstorm
+        </a>{' '}
         and{' '}
-        <a href="https://nav.al/how-to-get-rich" target="_blank" rel="noopener noreferrer">
+        <a href="https://nav.al/how-to-get-rich" target="_blank" rel="noopener noreferrer external">
           podcast 'how to get rich'
         </a>
         . Which started out as several tweetstorms, the podcast dove deep into each tweet.
@@ -51,7 +51,7 @@ const AboutPage = () => (
         </a>
       </p>
       <p>
-        <Link to="chapters" className="link-cta">
+        <Link to="/chapters/" className="link-cta">
           Enjoy reading
         </Link>
       </p>
