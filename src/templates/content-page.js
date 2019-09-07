@@ -13,8 +13,6 @@ if (typeof window !== `undefined`) {
 }
 
 const TemplateContent = ({ data, pageContext, transitionStatus, entry, exit }) => {
-  console.log(transitionStatus, entry, exit)
-
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   const { next } = pageContext
@@ -76,7 +74,6 @@ const TemplateContent = ({ data, pageContext, transitionStatus, entry, exit }) =
         <article className="article" dangerouslySetInnerHTML={{ __html: html }} />
       </div>
 
-      {/* {path !== null || title !== null ? <LinkNext path title /> : null} */}
       <LinkNext path={path} title={title} />
     </Layout>
   )
