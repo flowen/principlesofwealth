@@ -1,6 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
+import TransitionLink from 'gatsby-plugin-transition-link'
+
 import useIntersection from '../hooks/useIntersectionobserver'
 
 let Splitting
@@ -17,24 +18,37 @@ const LinkNext = ({ path, title }) => {
       <a
         href="https://www.flowen.me"
         target="_blank"
+        rel="noopener noreferrer"
         className={`link-next ${intersected ? 'show' : null}`}
-        rel="noopener nofollower"
-        ref={refObserver}
       >
-        <div className="link-next__label">Made by</div>
-        <div className="link-next__title" data-splitting="">
-          Rou Hun Fan
+        <div className="link-next__wrapper" ref={refObserver}>
+          <div className="link-next__label">Made by</div>
+          <div className="link-next__title" data-splitting="">
+            Rou Hun Fan
+          </div>
         </div>
       </a>
     )
   } else {
     return (
-      <Link to={path} className={`link-next ${intersected ? 'show' : null}`} ref={refObserver}>
-        <div className="link-next__label">Read on</div>
-        <div className="link-next__title" data-splitting="">
-          {title}
+      <TransitionLink
+        exit={{
+          length: 1.25,
+          delay: 0,
+        }}
+        entry={{
+          delay: 1.25,
+        }}
+        to={path}
+        className={`link-next ${intersected ? 'show' : null}`}
+      >
+        <div className="link-next__wrapper" ref={refObserver}>
+          <div className="link-next__label">Read on</div>
+          <div className="link-next__title" data-splitting="">
+            {title}
+          </div>
         </div>
-      </Link>
+      </TransitionLink>
     )
   }
 }

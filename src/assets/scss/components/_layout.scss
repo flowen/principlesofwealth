@@ -1,7 +1,24 @@
 .layout {
   margin: 0 0 $sp-lg;
+  padding: $sp-base;
+  transition: transform $d-slower $ease-out, opacity $d-slower $ease-out;
 
   @include tablet-portrait {
     margin-bottom: $sp-xl;
+  }
+}
+
+.tl-wrapper-status {
+  &--entering .layout {
+    opacity: 0;
+  }
+
+  &--entered .layout {
+    opacity: 1;
+  }
+
+  &--exiting .layout {
+    opacity: 0;
+    transform: translateY(-50px);
   }
 }

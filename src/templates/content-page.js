@@ -1,5 +1,7 @@
 import React, { useLayoutEffect, useEffect } from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
+import TransitionLink from 'gatsby-plugin-transition-link'
+
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Nav from '../components/nav'
@@ -10,7 +12,9 @@ if (typeof window !== `undefined`) {
   Splitting = require('splitting')
 }
 
-const TemplateContent = ({ data, pageContext }) => {
+const TemplateContent = ({ data, pageContext, transitionStatus, entry, exit }) => {
+  console.log(transitionStatus, entry, exit)
+
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   const { next } = pageContext
@@ -27,7 +31,9 @@ const TemplateContent = ({ data, pageContext }) => {
 
   useEffect(() => {
     const title = document.querySelector('.title')
-    title.classList.add('show')
+    setTimeout(() => {
+      title.classList.add('show')
+    }, 175)
 
     return () => {
       title.classList.remove('show')
@@ -35,15 +41,25 @@ const TemplateContent = ({ data, pageContext }) => {
   }, [])
 
   return (
-    <Layout className="content-page">
+    <Layout className={`content-page ${frontmatter.path.split('/')[1]}`}>
       <SEO description={frontmatter.intro} />
 
       <header className="header">
-        <Link className="logo" to="/">
+        <TransitionLink
+          exit={{
+            length: 1.25,
+            delay: 0,
+          }}
+          entry={{
+            delay: 1.25,
+          }}
+          to="/"
+          className="logo"
+        >
           Principles
           <br /> of Wealth
           <br /> .net
-        </Link>
+        </TransitionLink>
 
         <Nav />
 

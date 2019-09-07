@@ -1,18 +1,38 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import TransitionLink from 'gatsby-plugin-transition-link'
 
 const Nav = () => (
   <nav className="nav">
     <ul className="nav__list">
       <li className="nav__item">
-        <Link to="/" className="nav__anchor">
+        <TransitionLink
+          exit={{
+            length: 1.25,
+            delay: 0,
+          }}
+          entry={{
+            delay: 1.25,
+          }}
+          to="/"
+          className="nav__anchor"
+        >
           About
-        </Link>
+        </TransitionLink>
       </li>
       <li className="nav__item">
-        <Link to="/chapters/" className="nav__anchor">
+        <TransitionLink
+          exit={{
+            length: 1.25,
+            delay: 0,
+          }}
+          entry={{
+            delay: 1.25,
+          }}
+          to="/chapters"
+          className="nav__anchor"
+        >
           Chapters
-        </Link>
+        </TransitionLink>
       </li>
     </ul>
   </nav>

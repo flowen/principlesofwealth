@@ -11,7 +11,7 @@
       grid-column: 1 / 2;
       grid-row: 1 / 1;
       margin: 0 0 $sp-xl;
-      font-size: 13px;
+      font-size: 11px;
       font-weight: 700;
       text-align: right;
       text-decoration: none;
@@ -100,13 +100,29 @@
     }
 
     @include tablet-portrait {
-      grid-column: 2 / -2;
+      grid-column: 2 / -3;
       columns: 2;
       column-gap: var(--gutter);
     }
 
     @include tablet-landscape {
       columns: 3;
+    }
+  }
+
+  &.accountability .title {
+    $min_width: 320px;
+    $max_width: 899px;
+    $min_font: 38px;
+    $max_font: 80px;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+
+    @include tablet-landscape {
+      $min_width: 899px;
+      $max_width: 1440px;
+      $min_font: 85px;
+      $max_font: 145px;
+      @include fluid-type($min_width, $max_width, $min_font, $max_font);
     }
   }
 }

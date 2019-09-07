@@ -1,5 +1,5 @@
 import React, { useLayoutEffect, useEffect } from 'react'
-import { Link } from 'gatsby'
+import TransitionLink from 'gatsby-plugin-transition-link'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Nav from '../components/nav'
@@ -16,7 +16,9 @@ const AboutPage = () => {
 
   useEffect(() => {
     const title = document.querySelector('.title')
-    title.classList.add('show')
+    setTimeout(() => {
+      title.classList.add('show')
+    }, 175)
 
     return () => {
       title.classList.remove('show')
@@ -70,9 +72,19 @@ const AboutPage = () => {
           </a>
         </p>
         <p>
-          <Link to="/chapters/" className="link-cta">
-            Enjoy reading
-          </Link>
+          <TransitionLink
+            exit={{
+              length: 1.25,
+              delay: 0,
+            }}
+            entry={{
+              delay: 1.25,
+            }}
+            to="/chapters"
+            className="nav__anchor"
+          >
+            Chapters
+          </TransitionLink>
         </p>
       </div>
     </Layout>

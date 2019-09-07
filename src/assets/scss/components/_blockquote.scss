@@ -43,10 +43,7 @@ blockquote {
     margin-top: $sp-lg;
     margin-bottom: $sp-lg;
 
-    & + h1,
-    & + h2,
-    & + h3,
-    & + h4 {
+    & + * {
       margin-top: 0;
     }
   }

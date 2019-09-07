@@ -9,7 +9,7 @@ if (typeof window !== `undefined`) {
  *
  * @param {object} options - intersectionObserver options
  */
-export default function useIntersection(options) {
+export default function useIntersection(options = { threshold: 0 }) {
   const [observerEntry, setEntry] = useState({})
   const refObserver = useRef()
 
