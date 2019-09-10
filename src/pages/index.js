@@ -81,9 +81,9 @@ const AboutPage = () => {
               delay: 1.25,
             }}
             to="/chapters"
-            className="nav__anchor"
+            className="link-cta"
           >
-            Chapters
+            Go to Chapters
           </TransitionLink>
         </p>
       </div>
