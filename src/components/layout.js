@@ -1,9 +1,10 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
-
 import { useStaticQuery, graphql } from 'gatsby'
 import { setConfig } from 'react-hot-loader'
+
+import Footer from '../components/footer'
 
 import twitterCard from '../assets/cards/twitter-card.png'
 import ogCard from '../assets/cards/og-card.png'
@@ -80,6 +81,8 @@ const Layout = ({ children, className }) => {
       ></Helmet>
 
       <main className={`layout ${className}`}>{children}</main>
+
+      <Footer />
     </>
   )
 }
