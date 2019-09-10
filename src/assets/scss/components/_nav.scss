@@ -38,14 +38,18 @@
         top: 5px;
         left: -40px;
         opacity: 0;
-        transition: opacity $d-slow $ease-in;
+        transform: translateX(-10px);
+        transition: opacity $d-slow $ease-in, transform $d-slow $ease-in;
       }
 
       &[aria-current='page']::after {
         opacity: 1;
+        transform: translateX(0);
       }
+
       &:hover::after {
         opacity: 1 !important;
+        transform: translateX(0);
       }
 
       &:hover {
@@ -53,6 +57,7 @@
 
         &::after {
           opacity: 1;
+          transform: translateX(0);
         }
       }
     }
