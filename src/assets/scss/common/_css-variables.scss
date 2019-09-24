@@ -1,0 +1,55 @@
+:root {
+  // COLOR VARIABLES
+  --color-pink: #ec9b9b;
+  --color-blue: #412779;
+  --color-brown: #694747;
+
+  --color-dark: #1d1d1d;
+  --color-white: #fff;
+  --color-off-white: #e9dfdf;
+
+  --color-primary: var(--color-pink);
+  --color-secondary: var(--color-blue);
+
+  --color-heading: var(--color-primary);
+
+  --color-invalid: #c61617;
+  --color-success: #56c271;
+  --color-disabled: #ddd;
+
+  // @media (prefers-color-scheme: dark) {
+  //   :root {
+  //     --color-primary: var(--color-brown);
+  //     --color-secondary: var(--color-off-white);
+  //   }
+  // }
+
+  // GRID VARIABLES
+  --columns: 4;
+  --gutter: 10px;
+
+  @include phone {
+    --columns: 5;
+  }
+
+  @include tablet-portrait {
+    --columns: 9;
+    --gutter: 20px;
+  }
+
+  @include tablet-landscape {
+    --columns: 12;
+  }
+}
+
+* {
+  transition-property: all !important;
+  transition-duration: $d-normal !important;
+  transition-timing-function: $ease-out !important;
+  transition-delay: 0s !important;
+}
+
+.theme-light:root {
+  --color-primary: var(--color-brown);
+  --color-secondary: var(--color-off-white);
+}

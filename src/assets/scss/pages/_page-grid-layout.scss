@@ -1,25 +1,8 @@
-:root {
-  --columns: 4;
-  --gutter: 10px;
-
-  @include phone {
-    --columns: 5;
-  }
-
-  @include tablet-portrait {
-    --columns: 9;
-    --gutter: 20px;
-  }
-
-  @include tablet-landscape {
-    --columns: 12;
-  }
-}
-
 .about-page,
 .chapters-page,
 .content-page .header {
   display: grid;
+
   // formula: (window-width - (padding + (gutter * (columns - 1))) / columns) - gutter
   // because there's less gutters then columns, we only subtract it once from the window-width
   grid-template-columns: repeat(

@@ -12,11 +12,11 @@
 @import 'common/font-mixins';
 
 // Common
+@import 'common/css-variables';
 @import 'common/base';
-// @import 'common/form';
-// @import 'common/animation';
 
 // Components
+@import 'components/svg';
 @import 'components/layout';
 @import 'components/nav';
 @import 'components/footer';

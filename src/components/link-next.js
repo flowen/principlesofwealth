@@ -4,11 +4,6 @@ import TransitionLink from 'gatsby-plugin-transition-link'
 
 import useIntersection from '../hooks/useIntersectionobserver'
 
-let Splitting
-if (typeof window !== `undefined`) {
-  Splitting = require('splitting')
-}
-
 const LinkNext = ({ path, title }) => {
   const { observerEntry, refObserver } = useIntersection({ threshold: 0 })
   const intersected = observerEntry.isIntersecting

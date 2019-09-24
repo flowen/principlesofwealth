@@ -26,7 +26,7 @@ $fs-xl: 4.8rem;
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  color: $color-heading;
+  color: --color-heading;
   line-height: 1;
   margin: $sp-base 0;
   word-break: break-word;
@@ -77,7 +77,7 @@ $fs-xl: 4.8rem;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  color: $color-primary;
+  color: var(--color-primary);
 
   $min_width: 320px;
   $max_width: 899px;
@@ -103,7 +103,7 @@ $fs-xl: 4.8rem;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  color: $color-primary;
+  color: var(--color-primary);
   font-size: $fs-base;
 
   @include tablet-portrait {

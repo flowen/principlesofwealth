@@ -27,7 +27,7 @@
     white-space: nowrap;
 
     @include tablet-portrait {
-      text-decoration: none;
+      background: none;
 
       &::after {
         content: '';

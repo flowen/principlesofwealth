@@ -19,7 +19,7 @@ export default function useIntersection(options = { threshold: 0 }) {
     observer.observe(refObserver.current)
 
     return () => observer.disconnect()
-  }, [refObserver])
+  }, [refObserver, options])
 
   return { observerEntry, refObserver }
 }

@@ -1,8 +1,10 @@
 blockquote {
   margin: 0 0 $sp-base;
   padding: $sp-sm 0;
-  border-top: 3px solid rgba($color-primary, 0.3);
-  border-bottom: 3px solid rgba($color-primary, 0.3);
+  border-top: 3px solid var(--color-primary);
+  border-bottom: 3px solid var(--color-primary);
+  // border-top: 3px solid rgba(var(--color-primary), 0.3);
+  // border-bottom: 3px solid rgba(var(--color-primary), 0.3);
   font-weight: 700;
   font-size: $fs-md;
   break-inside: avoid;

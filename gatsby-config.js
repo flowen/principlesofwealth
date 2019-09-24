@@ -8,7 +8,8 @@ module.exports = {
     title: `Principles of wealth`,
     description: `Because reading is faster than listening`,
     twitter_handle: `@flowen_nl`,
-    keywords: 'Naval, Ravikant, Naval Ravikant, Principles of wealth, how to get rich',
+    keywords:
+      'Naval, Ravikant, Naval Ravikant, Principles of wealth, how to get rich, podcast, summary',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -93,8 +94,5 @@ module.exports = {
         respectDNT: true,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }
