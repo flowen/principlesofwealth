@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import profileImage from '../assets/images/profile-img.jpg'
 
-const Footer = ({ menuOpen, themeLight }) => {
-  const [theme, setTheme] = useState(themeLight)
-
+const Footer = ({ themeDark, setThemeDark, menuOpen, setMenuOpen }) => {
   if (typeof window === `undefined`) return null
 
-  if (themeLight) {
+  console.log(themeDark, menuOpen)
+
+  if (themeDark) {
     document.documentElement.classList.remove('theme-light')
     document.documentElement.classList.add('theme-dark')
   } else {
@@ -21,7 +21,14 @@ const Footer = ({ menuOpen, themeLight }) => {
           <img src={profileImage} alt="Made by Rou Hun Fan" className="footer__menu-img" />
         </label>
 
-        <input type="checkbox" name="menu" id="menu" className="footer__menu-checkbox" />
+        <input
+          type="checkbox"
+          name="menu"
+          id="menu"
+          className="footer__menu-checkbox"
+          onClick={() => setMenuOpen(!menuOpen)}
+          defaultChecked={menuOpen}
+        />
 
         <ul className="footer__menu-list">
           <li className="footer__menu-item">
@@ -29,10 +36,11 @@ const Footer = ({ menuOpen, themeLight }) => {
 
             <input
               type="checkbox"
+              defaultChecked={themeDark}
               name="color-switch"
               id="color-switch"
               className="footer__switch-checkbox"
-              onClick={() => setTheme(!theme)}
+              onClick={() => setThemeDark(!themeDark)}
             />
           </li>
           <li className="footer__menu-item">

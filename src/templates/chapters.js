@@ -1,7 +1,6 @@
 import React, { useLayoutEffect, useEffect } from 'react'
 import TransitionLink from 'gatsby-plugin-transition-link'
 
-import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Nav from '../components/nav'
 

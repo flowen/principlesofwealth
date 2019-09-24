@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
+
 import { useStaticQuery, graphql } from 'gatsby'
 import { setConfig } from 'react-hot-loader'
 
@@ -16,7 +17,7 @@ import 'splitting/dist/splitting.css'
 // for hot-reloader to work - https://github.com/gaearon/react-hot-loader/issues/1088
 setConfig({ pureSFC: true })
 
-const Layout = ({ children, className, menuOpen, themeLight }) => {
+const Layout = ({ children, className }) => {
   const { site } = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -32,6 +33,9 @@ const Layout = ({ children, className, menuOpen, themeLight }) => {
   `)
 
   const { siteUrl, title, description, keywords, twitter_handle } = site.siteMetadata
+
+  const [themeDark, setThemeDark] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   return (
     <>
@@ -82,7 +86,12 @@ const Layout = ({ children, className, menuOpen, themeLight }) => {
 
       <main className={`layout ${className}`}>{children}</main>
 
-      <Footer menuOpen themeLight />
+      <Footer
+        themeDark={themeDark}
+        setThemeDark={setThemeDark}
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+      />
     </>
   )
 }
