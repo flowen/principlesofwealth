@@ -6,7 +6,7 @@ const Footer = ({ menuOpen, themeLight }) => {
 
   if (typeof window === `undefined`) return null
 
-  if (theme) {
+  if (themeLight) {
     document.documentElement.classList.remove('theme-light')
     document.documentElement.classList.add('theme-dark')
   } else {

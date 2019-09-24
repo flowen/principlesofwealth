@@ -12,7 +12,7 @@ if (typeof window !== `undefined`) {
   Splitting = require('splitting')
 }
 
-const TemplateContent = ({ data, pageContext, transitionStatus, entry, exit }) => {
+const TemplateContent = ({ data, pageContext }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   const { next } = pageContext
@@ -31,6 +31,7 @@ const TemplateContent = ({ data, pageContext, transitionStatus, entry, exit }) =
     if (typeof window === `undefined`) return
 
     const title = document.querySelector('.title')
+
     setTimeout(() => {
       title.classList.add('show')
     }, 175)

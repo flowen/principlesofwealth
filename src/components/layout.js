@@ -16,7 +16,7 @@ import 'splitting/dist/splitting.css'
 // for hot-reloader to work - https://github.com/gaearon/react-hot-loader/issues/1088
 setConfig({ pureSFC: true })
 
-const Layout = ({ children, className }) => {
+const Layout = ({ children, className, menuOpen, themeLight }) => {
   const { site } = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -82,7 +82,7 @@ const Layout = ({ children, className }) => {
 
       <main className={`layout ${className}`}>{children}</main>
 
-      <Footer />
+      <Footer menuOpen themeLight />
     </>
   )
 }
