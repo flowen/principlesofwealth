@@ -1,19 +1,17 @@
 import React, { useState } from 'react'
 import profileImage from '../assets/images/profile-img.jpg'
 
-const Footer = () => {
-  const [themeDark, setThemeDark] = useState(true)
+const Footer = ({ menuOpen, themeLight }) => {
+  const [theme, setTheme] = useState(themeLight)
 
-  if (themeDark) {
+  if (typeof window === `undefined`) return null
+
+  if (theme) {
     document.documentElement.classList.remove('theme-light')
     document.documentElement.classList.add('theme-dark')
-    // document.documentElement.style.setProperty('--color-primary', '#000')
-    // document.documentElement.style.setProperty('--color-secondary', '#fff')
   } else {
     document.documentElement.classList.remove('theme-dark')
     document.documentElement.classList.add('theme-light')
-    // document.documentElement.style.setProperty('--color-primary', '#fff')
-    // document.documentElement.style.setProperty('--color-secondary', '#000')
   }
 
   return (
@@ -34,7 +32,7 @@ const Footer = () => {
               name="color-switch"
               id="color-switch"
               className="footer__switch-checkbox"
-              onClick={() => setThemeDark(!themeDark)}
+              onClick={() => setTheme(!theme)}
             />
           </li>
           <li className="footer__menu-item">

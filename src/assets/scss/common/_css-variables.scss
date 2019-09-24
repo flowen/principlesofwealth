@@ -42,9 +42,14 @@
   }
 }
 
-* {
-  transition-property: all !important;
-  transition-duration: $d-normal !important;
+p,
+h1,
+h2,
+h3,
+h4,
+blockquote {
+  transition-property: color, background-color !important;
+  transition-duration: $d-slowest !important;
   transition-timing-function: $ease-out !important;
   transition-delay: 0s !important;
 }

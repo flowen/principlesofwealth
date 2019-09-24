@@ -15,6 +15,8 @@ const ChaptersPage = ({ pageContext }) => {
   })
 
   useEffect(() => {
+    if (typeof window === `undefined`) return
+
     const title = document.querySelector('.title')
     setTimeout(() => {
       title.classList.add('show')
