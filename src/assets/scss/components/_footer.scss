@@ -74,16 +74,13 @@
     }
   }
 
-  &__switch {
-  }
-
   &__switch-label {
     display: flex;
     flex-direction: row;
-    border: 2px solid var(--color-primary);
-    border-radius: 20px;
     padding: 0.5rem;
     background: var(--color-secondary);
+    border: 2px solid var(--color-primary);
+    border-radius: 20px;
     cursor: pointer;
   }
 
