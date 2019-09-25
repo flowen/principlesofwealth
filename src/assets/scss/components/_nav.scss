@@ -29,12 +29,10 @@
     @include tablet-portrait {
       background: none;
 
-      &::after {
-        content: '';
+      .svg-arrow {
         position: absolute;
         width: 37px;
         height: 17px;
-        background: url('../svg/arrow.svg') no-repeat left center;
         top: 5px;
         left: -40px;
         opacity: 0;
@@ -42,12 +40,12 @@
         transition: opacity $d-slow $ease-in, transform $d-slow $ease-in;
       }
 
-      &[aria-current='page']::after {
+      &[aria-current='page'] .svg-arrow {
         opacity: 1;
         transform: translateX(0);
       }
 
-      &:hover::after {
+      &:hover .svg-arrow {
         opacity: 1 !important;
         transform: translateX(0);
       }
@@ -55,7 +53,7 @@
       &:hover {
         text-decoration: none;
 
-        &::after {
+        & .svg-arrow {
           opacity: 1;
           transform: translateX(0);
         }

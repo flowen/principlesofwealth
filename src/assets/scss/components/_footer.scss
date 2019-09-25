@@ -34,8 +34,16 @@
       bottom: 0;
       background: $color-white;
       mix-blend-mode: difference;
-      transform: translateX(-100%);
-      transition: transform $d-slower $ease-in-out;
+      opacity: 0;
+      transition: opacity $d-slow $ease-out;
+    }
+
+    &[data-active-theme='true']::after {
+      opacity: 0;
+    }
+
+    &[data-active-theme='false']::after {
+      opacity: 1;
     }
   }
 
@@ -57,7 +65,7 @@
     transform: translate(-50%, -50%);
     transition-property: transform;
     transition-duration: $d-slow;
-    transition-timing-function: $ease-out;
+    transition-timing-function: $ease-in-out;
   }
 
   &__menu-checkbox {
@@ -75,6 +83,7 @@
   }
 
   &__switch-label {
+    position: relative;
     display: flex;
     flex-direction: row;
     padding: 0.5rem;
@@ -82,6 +91,27 @@
     border: 2px solid var(--color-primary);
     border-radius: 20px;
     cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 4px;
+      width: 29px;
+      height: 29px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      opacity: 0.4;
+      transition: transform $d-slow $ease-out;
+    }
+
+    &[data-active-theme='true']::before {
+      transform: translateX(0);
+    }
+
+    &[data-active-theme='false']::before {
+      transform: translateX(30px);
+    }
   }
 
   &__switch-icon {

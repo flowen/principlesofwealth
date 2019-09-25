@@ -38,8 +38,12 @@ const Layout = ({ children }) => {
 
   const { siteUrl, title, description, keywords, twitter_handle } = site.siteMetadata
 
-  const [themeDark, setThemeDark] = useState(false)
+  const [themeDark, setThemeDark] = useState(true)
   const [menuOpen, setMenuOpen] = useState(false)
+
+  useLayoutEffect(() => {
+    Splitting({ by: 'chars' })
+  })
 
   if (typeof window === `undefined`) return
 
@@ -50,10 +54,6 @@ const Layout = ({ children }) => {
     document.documentElement.classList.remove('theme-dark')
     document.documentElement.classList.add('theme-light')
   }
-
-  useLayoutEffect(() => {
-    Splitting({ by: 'chars' })
-  })
 
   return (
     <>

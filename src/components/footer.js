@@ -9,7 +9,7 @@ const Footer = ({ themeDark, setThemeDark, menuOpen, setMenuOpen }) => {
   return (
     <footer className="footer">
       <div className="footer__menu-wrapper">
-        <label htmlFor="menu" className="footer__label">
+        <label htmlFor="menu" className="footer__label" data-active-theme={themeDark}>
           <img src={profileImage} alt="Made by Rou Hun Fan" className="footer__menu-img" />
         </label>
 
@@ -24,7 +24,11 @@ const Footer = ({ themeDark, setThemeDark, menuOpen, setMenuOpen }) => {
 
         <ul className="footer__menu-list">
           <li className="footer__menu-item footer__switch">
-            <label htmlFor="color-switch" className="footer__switch-label">
+            <label
+              htmlFor="color-switch"
+              className="footer__switch-label"
+              data-active-theme={themeDark}
+            >
               <svg
                 className="footer__switch-icon svg-moon-icon"
                 xmlns="http://www.w3.org/2000/svg"
