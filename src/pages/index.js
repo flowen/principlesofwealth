@@ -6,7 +6,7 @@ import Nav from '../components/nav'
 
 const AboutPage = () => {
   useEffect(() => {
-    if (typeof window === `undefined`) return
+    if (typeof window === `undefined`) return null
 
     const title = document.querySelector('.title')
 

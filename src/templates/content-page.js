@@ -27,7 +27,7 @@ const TemplateContent = ({ data, pageContext }) => {
   })
 
   useEffect(() => {
-    if (typeof window === `undefined`) return
+    if (typeof window === `undefined`) return null
 
     const title = document.querySelector('.title')
 

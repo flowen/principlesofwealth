@@ -4,8 +4,6 @@ import profileImage from '../assets/images/profile-img.jpg'
 const Footer = ({ themeDark, setThemeDark, menuOpen, setMenuOpen }) => {
   if (typeof window === `undefined`) return null
 
-  console.log(themeDark, menuOpen)
-
   return (
     <footer className="footer">
       <div className="footer__menu-wrapper">

@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
     Splitting({ by: 'chars' })
   })
 
-  if (typeof window === `undefined`) return
+  if (typeof window === `undefined`) return null
 
   if (themeDark) {
     document.documentElement.classList.remove('theme-light')
