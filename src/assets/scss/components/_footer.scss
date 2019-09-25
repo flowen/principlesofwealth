@@ -71,9 +71,9 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0);
     transition-property: transform;
-    transition-duration: $d-slow;
+    transition-duration: $d-slower;
     transition-timing-function: $ease-in-out;
   }
 
@@ -84,8 +84,8 @@
     &:checked + .footer__menu-list {
       @for $i from 1 to 5 {
         .footer__menu-item:nth-child(#{$i}) {
-          transition-delay: $i * 0.05s;
-          transform: translate(-50%, calc(#{$i} * #{-$sp-lg} - 70px));
+          transform: translate(-50%, calc(#{$i} * #{-$sp-lg} - 70px)) scale(1);
+          transition-delay: $i * 0.15s;
         }
       }
     }

@@ -136,10 +136,6 @@
         margin: -2px 10px 0 -0.5em;
         line-height: 1;
       }
-
-      // & + * {
-      //   clear: left;
-      // }
     }
 
     p,
@@ -149,17 +145,14 @@
       &:first-child:first-letter {
         @include font-title;
         float: left;
-        margin: -2px 4px 0 0;
+        margin: -4px 4px 0 0;
         line-height: 1;
+        text-transform: uppercase;
 
         @include tablet-portrait {
           margin-left: -0.5em;
         }
       }
-
-      // & + * {
-      //   clear: left;
-      // }
     }
   }
 }
