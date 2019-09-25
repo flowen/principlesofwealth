@@ -1,6 +1,6 @@
 .footer {
   &__menu-wrapper {
-    z-index: 123123;
+    z-index: z('footer');
     position: fixed;
     bottom: 2vw;
     right: 2vw;
@@ -19,10 +19,10 @@
     cursor: pointer;
     overflow: hidden;
     border-radius: 50%;
-    border: 2px solid $color-white;
+    border: 2px solid var(--color-primary);
 
     @include tablet-landscape {
-      border: 5px solid $color-white;
+      border-width: 5px;
     }
 
     &::after {
@@ -67,7 +67,7 @@
     &:checked + .footer__menu-list {
       @for $i from 1 to 5 {
         .footer__menu-item:nth-child(#{$i}) {
-          transition-delay: $i * 0.15s;
+          transition-delay: $i * 0.05s;
           transform: translate(-50%, calc(#{$i} * #{-$sp-lg} - 70px));
         }
       }
@@ -77,6 +77,25 @@
   &__switch {
   }
 
+  &__switch-label {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid var(--color-primary);
+    border-radius: 20px;
+    padding: 0.5rem;
+    background: var(--color-secondary);
+    cursor: pointer;
+  }
+
+  &__switch-icon {
+    margin: 0 $sp-xs / 4;
+  }
+
+  &__switch-checkbox {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   &__menu-anchor {
     background: none;
 
@@ -84,7 +103,7 @@
       width: 3.2rem;
       height: 3.2rem;
       padding: 0.2rem;
-      border: 2px solid #fff;
+      border: 2px solid var(--color-primary);
       border-radius: 50%;
       display: flex;
       justify-content: center;

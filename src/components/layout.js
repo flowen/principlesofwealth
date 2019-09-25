@@ -1,4 +1,7 @@
-import React, { useState } from 'react'
+import '../assets/scss/index.scss'
+import 'splitting/dist/splitting.css'
+
+import React, { useState, useLayoutEffect } from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
@@ -10,14 +13,15 @@ import Footer from '../components/footer'
 import twitterCard from '../assets/cards/twitter-card.png'
 import ogCard from '../assets/cards/og-card.png'
 
-import '../assets/scss/index.scss'
-import 'splitting/dist/splitting.css'
-// import 'splitting/dist/splitting-cells.css'
+let Splitting
+if (typeof window !== `undefined`) {
+  Splitting = require('splitting')
+}
 
 // for hot-reloader to work - https://github.com/gaearon/react-hot-loader/issues/1088
 setConfig({ pureSFC: true })
 
-const Layout = ({ children, className }) => {
+const Layout = ({ children }) => {
   const { site } = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -36,6 +40,18 @@ const Layout = ({ children, className }) => {
 
   const [themeDark, setThemeDark] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+
+  if (themeDark) {
+    document.documentElement.classList.remove('theme-light')
+    document.documentElement.classList.add('theme-dark')
+  } else {
+    document.documentElement.classList.remove('theme-dark')
+    document.documentElement.classList.add('theme-light')
+  }
+
+  useLayoutEffect(() => {
+    Splitting({ by: 'chars' })
+  })
 
   return (
     <>
@@ -82,9 +98,9 @@ const Layout = ({ children, className }) => {
           { property: 'og:site_name', content: title },
           { property: 'og:type', content: 'website' },
         ]}
-      ></Helmet>
+      />
 
-      <main className={`layout ${className}`}>{children}</main>
+      <main className={`layout`}>{children}</main>
 
       <Footer
         themeDark={themeDark}

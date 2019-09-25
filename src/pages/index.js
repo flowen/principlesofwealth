@@ -1,19 +1,10 @@
-import React, { useLayoutEffect, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import TransitionLink from 'gatsby-plugin-transition-link'
 
 import SEO from '../components/seo'
 import Nav from '../components/nav'
 
-let Splitting
-if (typeof window !== `undefined`) {
-  Splitting = require('splitting')
-}
-
 const AboutPage = () => {
-  useLayoutEffect(() => {
-    Splitting({ by: 'chars' })
-  })
-
   useEffect(() => {
     if (typeof window === `undefined`) return
 

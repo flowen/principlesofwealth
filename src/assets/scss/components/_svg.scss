@@ -1,15 +1,27 @@
 .svg {
   &-twitter-icon {
-    stroke-width: 1;
-    stroke: #444;
-    fill: #fff;
+    stroke-width: 0;
+    stroke: none;
+    fill: var(--color-primary);
   }
 
   &-rh-icon {
     path {
-      stroke-width: 1;
-      stroke: #444;
-      fill: #fff;
+      stroke-width: 0;
+      stroke: none;
+      fill: var(--color-primary);
     }
+  }
+
+  &-sun-icon {
+    stroke-width: 0;
+    stroke: none;
+    fill: var(--color-primary);
+  }
+
+  &-moon-icon {
+    stroke-width: 0;
+    stroke: none;
+    fill: var(--color-primary);
   }
 }
