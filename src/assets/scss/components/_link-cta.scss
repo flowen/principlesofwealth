@@ -11,7 +11,7 @@
     height: 17px;
     margin: 0 $sp-xs 0 #{($sp-xs + $width) * -1};
     background: url('../svg/arrow.svg') no-repeat left center;
-    transition: transform $d-normal $ease-out;
+    transition: transform $d-slow $ease-in-out;
   }
 
   &:hover {

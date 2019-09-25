@@ -26,10 +26,15 @@
     font-weight: 700;
     white-space: nowrap;
 
+    .svg-arrow {
+      display: none;
+    }
+
     @include tablet-portrait {
       background: none;
 
       .svg-arrow {
+        display: block;
         position: absolute;
         width: 37px;
         height: 17px;
