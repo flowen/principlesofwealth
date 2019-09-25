@@ -41,6 +41,8 @@ const Layout = ({ children }) => {
   const [themeDark, setThemeDark] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
+  if (typeof window === `undefined`) return
+
   if (themeDark) {
     document.documentElement.classList.remove('theme-light')
     document.documentElement.classList.add('theme-dark')
