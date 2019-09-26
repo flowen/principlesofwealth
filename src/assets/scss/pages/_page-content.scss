@@ -133,6 +133,7 @@
 
       & + h1:first-letter,
       & + h2:first-letter {
+        @include dropcap;
         @include dropcap-title;
       }
 
@@ -141,14 +142,21 @@
       }
     }
 
-    p:first-child:first-letter {
-      @include dropcap;
+    p {
+      &:first-child:first-letter {
+        @include dropcap;
+      }
+
+      & + * {
+        clear: left;
+      }
     }
 
     h1,
     h2,
     h3 {
       &:first-child:first-letter {
+        @include dropcap;
         @include dropcap-title;
       }
 
