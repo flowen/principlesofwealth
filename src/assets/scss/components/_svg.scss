@@ -3,7 +3,7 @@
     path {
       stroke-width: 0;
       stroke: none;
-      fill: var(--color-primary);
+      fill: rgb(var(--color-primary));
     }
   }
 
@@ -13,6 +13,6 @@
   &-twitter-icon {
     stroke-width: 0;
     stroke: none;
-    fill: var(--color-primary);
+    fill: rgb(var(--color-primary));
   }
 }

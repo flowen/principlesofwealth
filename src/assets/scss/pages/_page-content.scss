@@ -72,8 +72,7 @@
       grid-column: 2 / -2;
       margin: 0 0 $sp-md;
       padding: 0 0 $sp-sm;
-      border-bottom: 1px solid var(--color-primary);
-      // border-bottom: 1px solid rgba(var(--color-primary), 0.3);
+      border-bottom: 1px solid rgba(var(--color-primary), 0.3);
 
       @include phone {
         grid-column: 2 / 5;
@@ -128,10 +127,13 @@
     }
 
     blockquote:first-child {
-      & + p:first-letter,
+      & + p:first-letter {
+        @include dropcap;
+      }
+
       & + h1:first-letter,
       & + h2:first-letter {
-        @include dropcap;
+        @include dropcap-title;
       }
 
       & + * {
@@ -139,12 +141,15 @@
       }
     }
 
-    p,
+    p:first-child:first-letter {
+      @include dropcap;
+    }
+
     h1,
     h2,
     h3 {
       &:first-child:first-letter {
-        @include dropcap;
+        @include dropcap-title;
       }
 
       & + * {

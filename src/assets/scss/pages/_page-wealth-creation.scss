@@ -1,0 +1,7 @@
+.wealth-creation {
+  &__list li {
+    @include tablet-portrait {
+      white-space: nowrap;
+    }
+  }
+}

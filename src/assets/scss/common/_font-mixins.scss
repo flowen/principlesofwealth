@@ -77,7 +77,7 @@ $fs-xl: 4.8rem;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  color: var(--color-primary);
+  color: rgb(var(--color-primary));
 
   $min_width: 320px;
   $max_width: 899px;
@@ -103,7 +103,7 @@ $fs-xl: 4.8rem;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  color: var(--color-primary);
+  color: rgb(var(--color-primary));
   font-size: $fs-base;
 
   @include tablet-portrait {
@@ -120,6 +120,15 @@ $fs-xl: 4.8rem;
 
   @include tablet-portrait {
     margin-left: -0.75em;
+  }
+}
+
+@mixin dropcap-title {
+  @include dropcap;
+  margin-top: 0.225em;
+
+  @include tablet-portrait {
+    margin-left: -0.3em;
   }
 }
 

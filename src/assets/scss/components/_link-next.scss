@@ -31,8 +31,7 @@
     max-width: calc((100vw) / var(--columns) * 3);
     margin: 0 0 $sp-base;
     padding: 0 0 $sp-base;
-    border-bottom: 1px solid var(--color-primary);
-    // border-bottom: 1px solid rgba(var(--color-primary), 0.3);
+    border-bottom: 1px solid rgba(var(--color-primary), 0.3);
     font-family: $primary-font;
     font-weight: 700;
     font-size: $fs-base;

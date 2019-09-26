@@ -1,21 +1,20 @@
 :root {
   // COLOR VARIABLES
-  --color-pink: #ec9b9b;
-  --color-blue: #412779;
-  --color-brown: #372222;
 
   --color-dark: #1d1d1d;
   --color-white: #fff;
-  --color-off-white: #e9dfdf;
-
-  --color-primary: var(--color-pink);
-  --color-secondary: var(--color-blue);
-
-  --color-heading: var(--color-primary);
-
   --color-invalid: #c61617;
   --color-success: #56c271;
   --color-disabled: #ddd;
+
+  --color-pink: 236, 155, 155;
+  --color-blue: 65, 39, 121;
+  --color-brown: 118, 64, 64;
+  --color-off-white: 233, 233, 233;
+
+  --color-primary: var(--color-pink);
+  --color-secondary: var(--color-blue);
+  --color-heading: rgb(var(--color-primary));
 
   // GRID VARIABLES
   --columns: 4;

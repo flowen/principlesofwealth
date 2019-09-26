@@ -48,13 +48,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
+  background-color: rgb(var(--color-secondary));
+  color: rgb(var(--color-primary));
   @include font-base;
 }
 
 p {
-  color: var(--color-primary);
+  color: rgb(var(--color-primary));
 }
 
 h1,
@@ -102,7 +102,7 @@ strong {
 
 a {
   display: inline-block;
-  color: var(--color-primary);
+  color: rgb(var(--color-primary));
   text-decoration: none;
 
   background-image: linear-gradient(0deg, var(--color-primary) 100%, hsla(0, 0%, 100%, 0));
@@ -136,7 +136,7 @@ sub {
 
 button {
   @include button-reset;
-  color: var(--color-secondary);
+  color: rgb(var(--color-secondary));
 }
 
 img {
