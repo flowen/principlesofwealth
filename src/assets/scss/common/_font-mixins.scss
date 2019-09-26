@@ -111,6 +111,18 @@ $fs-xl: 4.8rem;
   }
 }
 
+@mixin dropcap {
+  @include font-title;
+  float: left;
+  margin: 0.3em 4px 0 0;
+  line-height: 0.55;
+  text-transform: uppercase;
+
+  @include tablet-portrait {
+    margin-left: -0.75em;
+  }
+}
+
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);
 }
