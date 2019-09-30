@@ -12,8 +12,10 @@
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^3.1.4",
     "gatsby-plugin-sass": "^2.1.12",
+    "gatsby-plugin-sharp": "^2.2.27",
     "gatsby-plugin-transition-link": "^1.12.4",
     "gatsby-remark-external-links": "^0.0.4",
+    "gatsby-remark-images": "^3.1.25",
     "gatsby-source-filesystem": "^2.1.11",
     "gatsby-transformer-remark": "^2.6.19",
     "intersection-observer": "^0.7.0",
@@ -35,9 +37,9 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "yarn run develop",
+    "start": "yarn run dev",
     "serve": "gatsby serve"
   },
   "repository": {

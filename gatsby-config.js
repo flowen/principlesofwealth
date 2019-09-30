@@ -13,11 +13,19 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `chapters`,
         path: `${__dirname}/src/data/chapters`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     {
@@ -28,6 +36,17 @@ module.exports = {
             resolve: 'gatsby-remark-external-links',
             options: {
               target: '_blank',
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 600,
+              linkImagesToOriginal: false,
+              backgroundColor: 'rgb(236, 155, 155)',
+              // wrapperStyle: 'position: absolute;',
+              quality: 70,
+              withWebp: true,
             },
           },
         ],

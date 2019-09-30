@@ -142,6 +142,9 @@ button {
 img {
   max-width: 100%;
   height: auto;
+
+  break-inside: avoid;
+  break-after: avoid;
 }
 
 figure {
@@ -190,5 +193,22 @@ ol li {
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+.gatsby-resp-image {
+  &-wrapper {
+    position: absolute;
+
+    background-color: rgb(var(--color-secondary));
+  }
+
+  &-background-image {
+    background-image: none !important;
+    background-color: rgb(var(--color-secondary));
+  }
+
+  &-image {
+    mix-blend-mode: multiply;
   }
 }
