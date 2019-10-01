@@ -6,7 +6,7 @@
 
   &__item {
     counter-increment: chapter-counter;
-    border-bottom: 1px solid rgb(var(--color-primary));
+    border-bottom: 1px solid rgba(var(--color-primary), 0.3);
 
     &:last-child {
       border-bottom: none;
