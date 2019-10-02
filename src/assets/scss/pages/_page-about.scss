@@ -27,5 +27,9 @@
     @include tablet-landscape {
       grid-column: 5 / 9;
     }
+
+    @include desktop {
+      grid-column-end: 8;
+    }
   }
 }

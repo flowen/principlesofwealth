@@ -1,8 +1,8 @@
 blockquote {
   margin: 3rem 0;
   padding: $sp-sm 0;
-  border-top: 15px solid rgba(var(--color-primary), 0.3);
-  border-bottom: 15px solid rgba(var(--color-primary), 0.3);
+  border-top: 1px solid rgba(var(--color-primary), 0.3);
+  border-bottom: 1px solid rgba(var(--color-primary), 0.3);
   font-weight: 700;
   font-size: $fs-md;
   break-inside: avoid;
@@ -42,6 +42,7 @@ blockquote {
     column-span: all;
     margin-top: $sp-lg;
     margin-bottom: $sp-lg;
+    border-width: 15px;
 
     & + * {
       margin-top: 0;

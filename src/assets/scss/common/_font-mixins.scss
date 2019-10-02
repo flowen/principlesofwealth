@@ -27,7 +27,7 @@ $fs-xl: 4.8rem;
   font-weight: 700;
   font-display: swap;
   color: --color-heading;
-  line-height: 1;
+  line-height: 1.2;
   margin: $sp-base 0;
   word-break: break-word;
   overflow-wrap: break-word;
@@ -40,12 +40,10 @@ $fs-xl: 4.8rem;
 
   @include tablet-landscape {
     margin-top: $sp-md;
-    margin-bottom: $sp-sm;
   }
 
   @include desktop {
     margin-top: $sp-lg;
-    margin-bottom: $sp-md;
   }
 }
 
@@ -67,7 +65,7 @@ $fs-xl: 4.8rem;
 }
 
 @mixin font-strong {
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -77,6 +75,7 @@ $fs-xl: 4.8rem;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
+  line-height: 1;
   color: rgb(var(--color-primary));
 
   $min_width: 320px;
@@ -103,8 +102,8 @@ $fs-xl: 4.8rem;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  color: rgb(var(--color-primary));
   font-size: $fs-base;
+  color: rgb(var(--color-primary));
 
   @include tablet-portrait {
     font-size: $fs-md;
@@ -120,7 +119,6 @@ $fs-xl: 4.8rem;
 
   @include tablet-portrait {
     margin-top: 0.25em;
-    // margin-left: -0.4em;
   }
 }
 

@@ -36,9 +36,8 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "yarn run develop",
     "serve": "gatsby serve"
   },
   "repository": {
