@@ -7,14 +7,15 @@
   --color-success: #56c271;
   --color-disabled: #ddd;
 
+  // RGB colors
   --color-pink: 236, 155, 155;
-  --color-blue: 65, 39, 121;
+  --color-blue: 49, 24, 78;
   --color-brown: 118, 64, 64;
   --color-off-white: 233, 233, 233;
 
   --color-primary: var(--color-pink);
   --color-secondary: var(--color-blue);
-  --color-heading: rgb(var(--color-primary));
+  --color-heading: var(--color-primary);
 
   // GRID VARIABLES
   --columns: 4;

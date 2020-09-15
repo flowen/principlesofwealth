@@ -12,7 +12,6 @@ $fs-xl: 4.8rem;
   font-family: $primary-font;
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
   font-size: $fs-base;
   line-height: 1.5;
 
@@ -25,9 +24,13 @@ $fs-xl: 4.8rem;
   font-family: $heading-font;
   font-style: normal;
   font-weight: 700;
+  <<<<<<<HEAD
   font-display: swap;
   color: --color-heading;
   line-height: 1.2;
+  =======color: rgb(var(--color-heading));
+  line-height: 1;
+  >>>>>>>develop
   margin: $sp-base 0;
   word-break: break-word;
   overflow-wrap: break-word;
@@ -74,8 +77,7 @@ $fs-xl: 4.8rem;
   font-family: $secondary-font;
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  line-height: 1;
+  line-height: 1.2;
   color: rgb(var(--color-primary));
 
   $min_width: 320px;
@@ -101,7 +103,10 @@ $fs-xl: 4.8rem;
   font-family: $primary-font;
   font-style: normal;
   font-weight: 400;
+  <<<<<<<HEAD
   font-display: swap;
+  =======color: rgb(var(--color-primary));
+  >>>>>>>develop
   font-size: $fs-base;
   color: rgb(var(--color-primary));
 
