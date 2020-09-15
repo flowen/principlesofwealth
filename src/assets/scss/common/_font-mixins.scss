@@ -68,11 +68,11 @@ $fs-xl: 4.8rem;
 }
 
 @mixin font-title {
-  margin-top: 0;
+  margin-top: -4px;
   font-family: $secondary-font;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1;
   color: rgb(var(--color-primary));
 
   $min_width: 320px;
