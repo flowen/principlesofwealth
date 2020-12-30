@@ -79,17 +79,7 @@ module.exports = {
         icon: `src/assets/favicon/favicon-32x32.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Abhaya Libre`,
-            variants: [`400`, `700`],
-          },
-        ],
-      },
-    },
+    `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-google-analytics`,
