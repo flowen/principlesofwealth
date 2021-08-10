@@ -7,7 +7,7 @@ module.exports = {
     siteUrl: `https://principlesofwealth.net`,
     title: `Principles of wealth or how to get rich without being lucky`,
     description: `Principles of wealth. How to get rich without being lucky, a summary of Naval Ravikant's tweets and podcast.`,
-    twitter_handle: `@flowen_nl`,
+    twitter_handle: `@flowen_af`,
     keywords:
       'Naval, Ravikant, Naval Ravikant, Principles of wealth, how to get rich, podcast, summary',
   },

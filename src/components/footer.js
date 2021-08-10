@@ -55,7 +55,7 @@ const Footer = ({ themeDark, setThemeDark, menuOpen, setMenuOpen }) => {
           </li>
           <li className="footer__menu-item">
             <a
-              href="https://twitter.com/flowen_nl"
+              href="https://twitter.com/flowen_af"
               target="_blank"
               rel="noopener noreferrer"
               className="footer__menu-anchor"
