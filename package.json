@@ -16,7 +16,7 @@
     "gatsby-plugin-transition-link": "^1.20.5",
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-source-filesystem": "^2.8.1",
-    "gatsby-transformer-remark": "^2.13.1",
+    "gatsby-transformer-remark": "^5.25.1",
     "intersection-observer": "^0.7.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
